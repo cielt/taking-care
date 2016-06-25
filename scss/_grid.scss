@@ -1,0 +1,91 @@
+// *************************************
+//
+//   Grid
+//   -> Based on: MVCSS components > grid
+//
+// -------------------------------------
+//   Template
+// -------------------------------------
+//
+// .g
+//
+//   .g-b[center 1of2|...]
+//     / ...
+//
+//   .g-b[center 1of2|...]
+//     / ...
+//
+// *************************************
+
+// -------------------------------------
+//   Base
+// -------------------------------------
+
+// Note: grid block(s) will automatically add $g-gutter/2 (~10px) padding on either side of grid
+// thus, adjust padding accordingly, and / or add negative margin to make content flush-left / flush-right
+
+#{$g-selector}g {
+  @extend .cf; // cf = clearfix
+  display: block;
+}
+
+#{$g-selector}g-b {
+  box-sizing: border-box;
+  float: left;
+  margin: 0;
+  padding-left: $g-gutter/2;
+  padding-right: $g-gutter/2;
+  width: 100%;
+}
+
+// -------------------------------------
+//   Modifiers
+// -------------------------------------
+
+// ----- Center ----- //
+
+#{$g-selector}g-b--center {
+  display: block;
+  float: none;
+  margin: 0 auto;
+}
+
+// -------------------------------------
+//   Setup
+// -------------------------------------
+
+@mixin g-device-type($namespace: '') {
+
+  #{$g-selector}g-b--#{$namespace}1of1, #{$g-selector}g-b--#{$namespace}12of12 {
+    width: 100%;
+  }
+
+  @for $unit from 1 to $g-columns + 1 {
+    @for $column from 1 to $unit {
+      #{$g-selector}g-b--#{$namespace}#{$column}of#{$unit} {
+        width: percentage($column / $unit);
+        @for $division from 1 to $unit {
+          @if $column % $division == 0 and $unit % $division == 0 {
+            #{$g-selector}g-b--#{$namespace}#{$column / $division}of#{$unit / $division} {
+              @extend #{$g-selector}g-b--#{$namespace}#{$column}of#{$unit};
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// -------------------------------------
+//   Creation
+// -------------------------------------
+
+@include g-device-type();
+
+// responsive grid selectors
+
+@each $device in $g-defaults {
+  @media screen and (min-width: nth($device, 2)) {
+    @include g-device-type("#{nth($device, 1)}--");
+  }
+}

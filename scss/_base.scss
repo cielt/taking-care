@@ -1,0 +1,156 @@
+// =====================================
+//
+//   Base
+//   -> Tag-level defaults
+//
+// =====================================
+
+// -------------------------------------
+//   Global
+// -------------------------------------
+
+html {
+  width: 100%;
+  height: 100%;
+  font-size: $b-fontSize;
+  font-family: $b-fontFamily;
+  background-color: $white;
+  color: $c-text;
+}
+
+body, .outer-scaffold, .inner-scaffold {
+  height: 100%;
+  font-size: 100%;
+}
+
+.site-body {
+  min-height: 100%;
+  margin-bottom: em(-122px);
+
+  &:after {
+    content: "";
+    display: block;
+    height: em(122px);
+  }
+
+  @media (max-width: $g-m) {
+    min-height: 0;
+    margin-bottom: 0;
+
+    &:after {
+      height: 0;
+      display: none;
+    }
+  }
+}
+
+* {
+  box-sizing: border-box;
+  // override this for: colorbox, some accordion containers
+}
+
+// -------------------------------------
+//   Modifiers
+// -------------------------------------
+
+// class on the body element
+
+// -------------------------------------
+//   Block-level elements
+// -------------------------------------
+
+// reset
+
+blockquote, p, address, h1, h2, h3, h4, h5, h6 {
+  -webkit-margin-before: 0;
+  -webkit-margin-after: 0;
+  -webkit-margin-start: 0;
+  -webkit-margin-end: 0;
+}
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+  font-weight: bold;
+  line-height: 1.2;
+  margin-top: 0; // use tool class for other spacing attributes
+}
+
+// strip list style, spacing
+
+.list-reset {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+// bullet list
+
+.list-bullet {
+  margin: 0;
+  padding-left: em(24px);
+  list-style: disc outside;
+  line-height: $b-lineHeight;
+
+  li {
+    margin-bottom: $b-space-2;
+  }
+}
+
+// undo bullets in mobile
+.t-alignC .list-bullet {
+  @media (max-width: $g-m) {
+    list-style: none;
+    padding-left: 0;
+  }
+}
+
+// list items inline
+
+.list-inline {
+  li {
+    display: inline-block;
+    margin-right: $b-space-2;
+  }
+
+  &.rtl {
+    li {
+      margin-right: 0;
+      margin-left: $b-space-2;
+    }
+  }
+}
+
+// default body copy
+
+p {
+  margin: 0 auto $b-space-2;
+  line-height: $b-lineHeight;
+}
+
+// forms, etc.
+
+fieldset {
+  border: none;
+  padding: 0;
+}
+
+address {
+  font-style: normal;
+}
+
+// -------------------------------------
+//   Inline elements
+// -------------------------------------
+
+a, a:active, a:visited {
+  color: $grey1;
+  text-decoration: underline;
+}
+
+a:hover {
+  text-decoration: none;
+}

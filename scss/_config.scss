@@ -1,0 +1,109 @@
+// =====================================
+//
+//   Config
+//   -> defaults, settings
+//
+// =====================================
+
+// -------------------------------------
+//   @font-face
+// -------------------------------------
+
+// ----- Libre Baskerville ----- //
+
+
+// -------------------------------------
+//   Colors
+// -------------------------------------
+
+$blue0: #4A90E2;
+$blueGrey0: #91A1B3;
+
+$grey0: #fafafa;
+$grey1: #f4f4f4;
+$grey2: #e0e0e0;
+$grey3: #ccc;
+$grey4: #a2a2a2;
+$grey5: #666;
+
+$black: #000;
+$white: #fff;
+$clear: transparent;
+
+// ----- Context Names ----- //
+
+$c-background: $white;
+$c-text: $grey5;
+
+// -------------------------------------
+//   Base
+// -------------------------------------
+
+// ----- Typography ----- //
+
+$b-fontFamily: 'Libre Baskerville', Georgia, serif;
+$b-heading-fontFamily: $b-fontFamily;
+$b-sans-fontFamily: 'Helvetica Neue', sans-serif;
+$b-serif-fontFamily: $b-fontFamily;
+$b-fontSize: 16px; // HTML
+$b-fontSize-xs: em(12px);
+$b-fontSize-s: em(14px);
+$b-fontSize-l: em(18px);
+$b-fontSize-xl: em(24px);
+$b-fontSize-xxl: em(32px); // xxl, xxxl used mainly for hand of sean
+$b-fontSize-xxxl: em(44px);
+$b-fontSize-h1: em(28px);
+$b-fontSize-h2: $b-fontSize-xl;
+$b-fontSize-h3: $b-fontSize-l;
+$b-fontSize-h4: em(17px);
+$b-lineHeight: 1.3;
+
+// ----- Border Radius ----- //
+
+$b-borderRad-1: 5px;
+$b-borderRad-2: 10px;
+$b-borderStyle: solid;
+
+// ----- Border Width ----- //
+
+$b-borderWidth-xs: 1px;
+$b-borderWidth-s: 2px;
+$b-borderWidth-m: 3px;
+
+// ----- Sizing ----- //
+
+$b-maxWidth: em(1440px);
+$b-space-1: em(5px);
+$b-space-2: em(10px); // v spacing, default type
+$b-space-3: em(15px);
+$b-space-4: em(20px); // gutter
+$b-space-5: em(30px);
+$b-space-6: em(60px);
+
+// -------------------------------------
+//   Components
+// -------------------------------------
+
+// ----- Grid ----- //
+
+// Breakpoints
+
+$g-xs: em(480px);
+$g-s: em(600px);
+$g-m: em(959px);
+$g-l: em(1088px); // $g-s, $g-l not yet in use in grid classes
+
+// Settings
+
+$g-columns: 12;
+$g-defaults: 'xs' $g-xs, 's' $g-s, 'm' $g-m, 'l' $g-l;
+$g-gutter: $b-space-4; // 20px
+$g-silent: false;
+
+// Selector
+
+$g-selector: if($g-silent, unquote("%"), unquote("."));
+
+// -------------------------------------
+//   Structures
+// -------------------------------------

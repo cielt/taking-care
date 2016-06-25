@@ -1,0 +1,42 @@
+// =====================================
+//
+//   TC Global Elements
+//
+// =====================================
+
+// -------------------------------------
+//   Variables
+// -------------------------------------
+
+$logoIcoHeight: em(26px);
+
+// -------------------------------------
+//   Global
+// -------------------------------------
+
+// ----- Header ----- //
+
+.header-bar {
+
+  // fixed at top of the page
+  width: 100%;
+  top: 0;
+  left: 0;
+
+  .overlay {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    @include opacity(24);
+  }
+
+  .logo.home-link, .header-bar-block {
+    min-height: $logoIcoHeight;
+    line-height: $logoIcoHeight;
+  }
+
+  .home-link {
+    letter-spacing: 0.5px;
+  }
+}
