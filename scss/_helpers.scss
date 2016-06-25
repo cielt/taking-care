@@ -23,12 +23,6 @@
   }
 }
 
-// ----- font-url ----- //
-// -> returns url with base font dir + path-to-font (excluding file extension)
-@function font-url($path-to-file) {
-  @return url('#{$STATIC_URL}/web/fonts/#{$path-to-file}');
-}
-
 // -------------------------------------
 //   Mixins
 // -------------------------------------

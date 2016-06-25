@@ -46,7 +46,7 @@ body, .outer-scaffold, .inner-scaffold {
 
 * {
   box-sizing: border-box;
-  // override this for: colorbox, some accordion containers
+// override this for: colorbox, some accordion containers
 }
 
 // -------------------------------------
@@ -127,7 +127,7 @@ h6, .h6 {
 // default body copy
 
 p {
-  margin: 0 auto $b-space-2;
+  margin: 0 auto $b-space-4;
   line-height: $b-lineHeight;
 }
 
@@ -143,6 +143,19 @@ address {
 }
 
 // -------------------------------------
+//   Block Level elements
+// -------------------------------------
+
+.hairline {
+  display: block;
+  border: 0;
+  height: 0;
+  width: auto;
+  margin: 0;
+  border-bottom: $b-borderWidth-xs solid $blueGrey0;
+}
+
+// -------------------------------------
 //   Inline elements
 // -------------------------------------
 
@@ -153,4 +166,37 @@ a, a:active, a:visited {
 
 a:hover {
   text-decoration: none;
+}
+
+// -------------------------------------
+//   Form elements
+// -------------------------------------
+
+button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+
+  &::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+  }
+}
+
+button,
+a.button {
+  display: inline-block;
+  padding: 0 $b-space-2;
+  color: $white;
+  font-weight: bold;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+
+  font-size: $b-fontSize-s;
+  line-height: em(44px, 18px);
+  border-radius: $b-borderRad-1;
+  overflow: hidden;
 }

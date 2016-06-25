@@ -1,40 +1,78 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <meta name="fragment" content="!">
-  <title>Taking Care | Remembering Mom</title>
-  <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400italic,700" rel="stylesheet" type="text/css">
-  <link rel="stylesheet" href="css/screen.css">
-</head>
-<body>
-  <div class="page">
-    <div class="scaffold-outer p-rel">
-      <div class="header-bar p-fix z3">
-        <div class="header-bar-context p-rel">
-          <div class="overlay bg-blue0 p-abs z1"></div>
-          <div class="content pa-2 c-white p-rel z2 cf">
-            <a class="logo home-link c-white ts-s t-decor-none db fl" href="/">
-              <span class="ico dib mr-1 va-m lh-reset"><img class="fit" src="images/ico-swallow.svg" alt=""></span><em class="dib va-m lh-reset">Taking Care</em>
-            </a>
-            <div class="header-bar-block fr">
-              <span class="dib c-white ts-s lh-reset va-m">Remembering Mom</span>
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="fragment" content="!">
+    <title>Taking Care | Remembering Mom</title>
+    <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400italic,700" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Oswald:300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/screen.css">
+  </head>
+  <body>
+    <div class="page">
+      <div class="scaffold-outer p-rel">
+        <div class="header-bar p-fix z3">
+          <div class="header-bar-context p-rel">
+            <div class="overlay bg-blue0 p-abs z1"></div>
+            <div class="content pa-2 c-white p-rel z2 cf">
+              <a class="logo home-link c-white ts-s t-decor-none db fl" href="/">
+                <span class="ico dib mr-1 va-m lh-reset"><img class="fit" src="images/ico-swallow.svg" alt=""></span><em class="dib va-m lh-reset">Taking Care</em>
+              </a>
+              <div class="header-bar-block fr">
+                <span class="dib c-white ts-s lh-reset va-m">In Memory of Mom</span>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      <div class="main p-rel z2">
-        <!-- Images -->
-        <div class="w-max mx-auto">
-
-      
+        <div class="main p-rel z2">
+          <!-- Images -->
+          <div class="w-max mx-auto">
+            <div class="p-rel marquee-controls">
+              <div id="marquee-album" class="p-rel z1">
+                <div class="fit-frame bg-black">
+                  <img class="fit s--fith" src="images/mom-breakaway-open-sea.jpg" alt="Mom aboard the Breakaway with open sea in the background">
+                </div>
+                <div class="fit-frame bg-black">
+                  <img class="fit s--fith" src="images/memoriam-2-mom-dad-wedding.jpg" alt="Mom and Dad on their wedding day">
+                </div>
+                <div class="fit-frame bg-black">
+                  <img class="fit s--fith" src="images/197811-mom-dad-pong-nilla.jpg" alt="Mom">
+                </div>
+                <div class="fit-frame bg-black">
+                  <img class="fit s--fith" src="images/memoriam-1-mom-solo-red-dress.jpg" alt="Mom">
+                </div>
+                <div class="fit-frame bg-black">
+                  <img class="fit s--fith" src="images/memoriam-6-swan-boat-kids.jpg" alt="Mom">
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
         <!-- Story -->
         <div class="w-max max-gm mx-auto">
-          <div class="pa-4">
-            <h1 class="h1 c-blue t-alignC">Page Title</h1>  
+          <div class="pa-2 pt-6 pb-6">
+            <div class="text-col mb-5">
+              <h1 class="h1 c-blue0 t-alignC normal mb-1">Yen-Sheng Loretta Tu</h1>
+              <span class="db c-blueGrey0 tf-sans ts-s t-alignC upper lsp-1 mb-5">June 29, 1948 &mdash; June 8, 2016</span>
+              <!-- intro -->
+              <p class="ts-xl tf-sans">Fusce id lacus tortor. Maecenas ut ligula lorem. Cras sit amet mi aliquam, efficitur felis scelerisque, iaculis diam. Nulla placerat ligula pharetra, egestas erat in, consectetur nunc.</p>
+              <hr class="hairline mt-5">
+            </div>
+            <div class="text-col mb-6">
+            <h2 class="mb-1">Mim Remembers</h2>
+            <div class="tf-sans ts-s c-blueGrey0 lsp-1 upper mb-4">June 8, 2016</div>
+            <p>Mom was selfless in everything she did, always thinking of others before herself. She knew what our favorite dishes were &mdash; whether it was dumplings or snow pea tips with shrimp &mdash; and would always make them when we came home and would send us back with bountiful goods, making sure our fridges were well-stocked.</p>
+
+            <p>She sacrificed her own comforts and convenience so that we could have more.</p>
+
+            <p>She encouraged us when we struggled and cheered for our accomplishments; she always had a way to push us toward our potential and wouldn&rsquo;t let us give up.</p>
+
+            <p>She was strong-willed, loyal, caring and good to the core. Her generous spirit knew no bounds.</p>
+
+            <p>Mom, we love you dearly and will miss you forever.</p>
+            </div>      
           </div>
         </div>
       </div>
@@ -45,5 +83,8 @@
       </div>
     </div>
   </div>
+  <script src="node_modules/jquery/dist/jquery.min.js"></script>
+  <script src="node_modules/slick-carousel/slick/slick.min.js"></script>
+  <script src="js/mom.js"></script>
 </body>
 </html>

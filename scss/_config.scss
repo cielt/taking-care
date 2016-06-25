@@ -43,20 +43,19 @@ $c-text: $grey5;
 
 $b-fontFamily: 'Libre Baskerville', Georgia, serif;
 $b-heading-fontFamily: $b-fontFamily;
-$b-sans-fontFamily: 'Helvetica Neue', sans-serif;
+$b-sans-fontFamily: 'Oswald', sans-serif;
 $b-serif-fontFamily: $b-fontFamily;
 $b-fontSize: 16px; // HTML
 $b-fontSize-xs: em(12px);
 $b-fontSize-s: em(14px);
 $b-fontSize-l: em(18px);
 $b-fontSize-xl: em(24px);
-$b-fontSize-xxl: em(32px); // xxl, xxxl used mainly for hand of sean
-$b-fontSize-xxxl: em(44px);
-$b-fontSize-h1: em(28px);
+$b-fontSize-xxl: em(32px);
+$b-fontSize-h1: em(40px);
 $b-fontSize-h2: $b-fontSize-xl;
 $b-fontSize-h3: $b-fontSize-l;
 $b-fontSize-h4: em(17px);
-$b-lineHeight: 1.3;
+$b-lineHeight: 1.6;
 
 // ----- Border Radius ----- //
 
@@ -89,7 +88,7 @@ $b-space-6: em(60px);
 // Breakpoints
 
 $g-xs: em(480px);
-$g-s: em(600px);
+$g-s: em(768px);
 $g-m: em(959px);
 $g-l: em(1088px); // $g-s, $g-l not yet in use in grid classes
 

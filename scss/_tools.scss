@@ -193,6 +193,16 @@
   font-size: $b-fontSize-xxl;
 }
 
+.h1 { 
+  font-size: $b-fontSize-xxl;
+  
+  @media (min-width: $g-m) {
+    font-size: $b-fontSize-h1;
+  } 
+}
+
+
+
 // ----- Color ----- //
 
 .c-white {
@@ -229,6 +239,10 @@ em, .italic {
   text-transform: uppercase;
 }
 
+.lsp-1 {
+  letter-spacing: 1px;
+}
+
 // ----- Weight ----- //
 
 .normal {
@@ -252,6 +266,10 @@ strong, .bold {
 // -------------------------------------
 
 // ----- Color ----- //
+
+.bg-black {
+  background-color: $black;
+}
 
 .bg-white {
   background-color: $white;

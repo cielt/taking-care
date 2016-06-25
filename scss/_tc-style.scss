@@ -9,6 +9,7 @@
 // -------------------------------------
 
 $logoIcoHeight: em(26px);
+$marqueeMaxHeight: em(512px);
 
 // -------------------------------------
 //   Global
@@ -38,5 +39,34 @@ $logoIcoHeight: em(26px);
 
   .home-link {
     letter-spacing: 0.5px;
+  }
+}
+
+// ----- Modules ----- //
+
+.text-col {
+  max-width: em(540px);
+  padding: 0 $b-space-4;
+  margin: 0 auto;
+}
+
+.fit-frame {
+  height: auto;
+  max-height: $marqueeMaxHeight;
+  overflow: hidden; 
+
+  .fit {
+    display: block;
+  }
+  
+  // at breakpoint $g-s, switch to fit-h
+  @media (min-width: $g-m) {
+    height: $marqueeMaxHeight;
+
+    .s--fith {
+      height: 100%;
+      width: auto;
+      margin: 0 auto;
+    }
   }
 }

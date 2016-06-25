@@ -34,6 +34,49 @@
 //   Vendor
 // -------------------------------------
 
+@import "../node_modules/slick-carousel/slick/slick.scss";
+
+.marquee-arrows {
+  width: 100%;
+  top: 50%;
+  margin-top: em(-200px, 32px);
+}
+
+// slick control overrides
+
+.slick-prev, .slick-next {
+    display: block;
+    height: em(96px, 32px);
+    width: em(24px, 32px);
+    cursor: pointer;
+    border: none;
+    background: transparent;
+    color: $white;
+    line-height: 1;
+    font-size: $b-fontSize-h1;
+    padding: 0;
+    text-align: center;
+    top: 50%;
+    margin-top: em(-48px, 32px);
+    left: 0;
+    z-index: 2;
+    @include opacity(48);
+
+    &:before {
+      content: '';
+      display: none;
+    }
+
+    &:focus, &:hover {
+      @opacity(100);
+    }
+}
+
+.slick-next {
+  left: 100%;
+  margin-left: em(-24px, 32px);
+}
+
 
 // -------------------------------------
 //   Tools
