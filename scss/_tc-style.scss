@@ -38,7 +38,7 @@ $marqueeMaxHeight: em(512px);
   }
 
   .logo.home-link, .header-bar-block {
-    min-height: $logoIcoHeight;
+    height: $logoIcoHeight;
     line-height: $logoIcoHeight;
   }
 
