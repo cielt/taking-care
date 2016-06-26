@@ -201,6 +201,11 @@
   } 
 }
 
+.m--ts-xl {
+  @media (min-width: $g-m) {
+    font-size: $b-fontSize-xl;
+  }
+}
 
 
 // ----- Color ----- //
