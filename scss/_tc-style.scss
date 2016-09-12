@@ -19,45 +19,77 @@ $marqueeMaxHeight: em(512px);
 // ----- Header ----- //
 
 .header-bar {
+  color: $blueGrey0;
+  position: fixed;
+  z-index: 3;
   width: 100%;
-  position: relative;
   top: 0;
   left: 0;
-  color: $blueGrey0;
-
+  
   .overlay {
+    position: absolute;
+    z-index: 1;
+    background: $blueGrey0;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     @include opacity(0);
-    -webkit-transition: opacity 300ms ease;
-    -moz-transition: opacity 300ms ease;
-    -o-transition: opacity 300ms ease;
-    transition: opacity 300ms ease;
+    transition: opacity 600ms ease 300ms;
   }
 
   .logo.home-link, .header-bar-block {
+    min-height: $logoIcoHeight;
     height: $logoIcoHeight;
     line-height: $logoIcoHeight;
   }
 
+  // home link
   .home-link {
-    color: $blueGrey0;
-    letter-spacing: 0.5px;
+    color: $white;
+    letter-spacing: em(0.5px);
 
     .ico-swallow {
       width: $logoIcoWidth;
       height: $logoIcoHeight;
-      background: url('../images/sprite-ico-swallow.svg') $clear no-repeat bottom center;
-      background-size: 26px auto;
+      background: url('../images/sprite-ico-swallow.svg') $clear no-repeat top center;
+      background-size: em(26px) auto;
+    }
+
+    // taking care
+    .home-label {
+      display: inline-block;
+      vertical-align: bottom;
+      line-height: normal;
+      font-size: $b-fontSize-s;
     }
   }
- }
+  
+  // menu button
+  .menu-btn {
+    @extend .px-2;
+    display: inline-block;
+    font-size: $b-fontSize-s;
+    font-family: $b-sans-fontFamily;
+    font-weight: 300;
+    line-height: em(28px, 14px);
+    vertical-align: middle;
+    color: $white;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: $b-borderRad-1;
+    border: $b-borderWidth-xs solid $clear;
+    transition: border-color 0.3s ease;
+
+    &:focus, &:hover {
+      border-color: $white;  
+    }
+  }
+}
 
 .header-spacing {
   height: 0;
- }
+}
 
 // ----- Modules ----- //
 
@@ -65,64 +97,136 @@ $marqueeMaxHeight: em(512px);
   max-width: em(540px);
   padding: 0 $b-space-4;
   margin: 0 auto;
- }
+}
 
-.fit-frame {
-  height: auto;
-  max-height: $marqueeMaxHeight;
-  overflow: hidden; 
+// marquee image frame
+.marquee-main {
+  display: table;
+  width: 100%;
+  position: relative;
+  height: 100vh;
 
-  .fit {
-    display: block;
+  // .marquee-album {
+  //   display: table;
+  //   width: 100%;
+  //   position: relative;
+  // }
+
+  .slide-frame {
+    width: 100vw;
   }
+
+  .image-window {
+    width: 100%; 
+    min-height: em(240px);
+    height: 100vh;
+    text-align: center;
+    overflow: hidden;
+    background: $black no-repeat center center;
+    background-size: cover;
+
+    // SLIDES -
+    &#slide-1 {
+      background-image: url(../images/slideshow/mom-breakaway-open-sea.jpg);
+    }
+
+    // &#slide-1 {
+    //   background-image: url(../images/slideshow/memoriam-2-mom-dad-wedding.jpg);
+    // }
+
+    // &#slide-1 {
+    //   background-image: url(../images/slideshow/memoriam-1-mom-solo-red-dress.jpg);
+    // }
+  }
+}
+
+// site title
+.marquee-main {
+  .title-block {
+    width: 100%;
+    bottom: 0;
+    text-align: right;
+    color: white;
+    padding: em(10px);
+    // type
+    .site-title {
+      font-weight: 300;
+    }
+
+    .site-description {
+      font-size: $b-fontSize-s;
+      font-weight: 400;
+    }
+  }
+
+  // controls
+  .slideshow {
+    .slide-frame {
+      position: relative;
+      z-index: 1;
+    }
+  } 
+
+  .slide-controls {
+      position: absolute;
+      z-index: 3;
+      bottom: 0;
+      left: 0;
+      margin: $b-space-2;
   
-// at breakpoint $g-s, switch to fit-h
-@media (min-width: $g-m) {
-  height: $marqueeMaxHeight;
+      .slide-refresh-btn {
+        display: inline-block;
+        width: em(40px, 24px);
+        height: em(40px, 24px);
+        background: rgba(255, 255, 255, 0.36);
+        border-radius: 50%;
+        text-align: center;
+        font-size: $b-fontSize-xl;
+        line-height: em(40px, 24px);
+        border: $b-borderWidth-xs solid $clear;
+        transition: background-color 0.3s ease;
 
-    .s--fith {
-        height: 100%;
-        width: auto;
-        margin: 0 auto;
-    }
-  }
-}
+        .fa {
+          vertical-align: middle;
+        }
 
-// -------------------------------------
-//   Waypoints
-// -------------------------------------
-
-.scrolling {
-  .header-bar {
-    // fixed at top of the page
-    position: fixed;
-    z-index: 3;
-    width: 100%;
-    top: 0;
-    left: 0;
-    color: $white;
-
-    .overlay {
-      @include opacity(24);
-    }
-
-    .logo.home-link, .header-bar-block {
-      min-height: $logoIcoHeight;
-      line-height: $logoIcoHeight;
-    }
-
-    .home-link {
-      color: $white;
-
-      .ico-swallow {
-        background-position: top center;
+        &:focus, &:hover {
+          background-color: rgba(141, 165, 179, 0.36);
+        }
       }
-    }
-  }
-
-
-  .header-spacing {
-    height: em(50px);
-    width: 100%;
   }
 }
+
+// -------------------------------------
+//  Footer
+// -------------------------------------
+
+.footer {
+  background: $grey5;
+}
+
+
+// -------------------------------------
+//   Media Queries
+// -------------------------------------
+
+// ----- MQ - < 959px ----- //
+
+@media (max-width: $g-m) {
+  // HOME 
+  .marquee-main, .marquee-main .image-window {
+    height: 60vh;
+  }
+}
+
+
+// ----- MQ - < 480px ----- //
+@media (max-width: $g-xs) {
+  // HOME 
+  .marquee-main, .marquee-main .image-window {
+    height: 40vh;
+  }
+}
+
+
+

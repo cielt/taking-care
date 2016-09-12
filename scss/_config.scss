@@ -9,7 +9,8 @@
 //   @font-face
 // -------------------------------------
 
-// ----- Libre Baskerville ----- //
+// ----- Libre Baskerville 400, 700 ----- //
+// ----- Oswald 300, 400 ----- //
 
 
 // -------------------------------------
@@ -41,7 +42,7 @@ $c-text: $grey5;
 
 // ----- Typography ----- //
 
-$b-fontFamily: 'Libre Baskerville', Georgia, serif;
+$b-fontFamily: 'Libre Baskerville', serif;
 $b-heading-fontFamily: $b-fontFamily;
 $b-sans-fontFamily: 'Oswald', sans-serif;
 $b-serif-fontFamily: $b-fontFamily;
@@ -55,12 +56,13 @@ $b-fontSize-h1: em(40px);
 $b-fontSize-h2: $b-fontSize-xl;
 $b-fontSize-h3: $b-fontSize-l;
 $b-fontSize-h4: em(17px);
-$b-lineHeight: 1.6;
+$b-lineHeight: 1.8;
 
 // ----- Border Radius ----- //
 
-$b-borderRad-1: 5px;
-$b-borderRad-2: 10px;
+$b-borderRad-1: 3px;
+$b-borderRad-2: 6px;
+$b-borderRad-3: 12px;
 $b-borderStyle: solid;
 
 // ----- Border Width ----- //

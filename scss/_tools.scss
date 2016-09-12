@@ -232,6 +232,7 @@ em, .italic {
 
 .tf-sans {
   font-family: $b-sans-fontFamily;
+  font-weight: 300;
 }
 
 .tf-serif {
@@ -250,12 +251,12 @@ em, .italic {
 
 // ----- Weight ----- //
 
-.normal {
-  font-weight: normal;
+.normal, .fw-400 {
+  font-weight: 400; // normal
 }
 
 strong, .bold {
-  font-weight: bold;
+  font-weight: 700;
 }
 
 .t-decor-none {
