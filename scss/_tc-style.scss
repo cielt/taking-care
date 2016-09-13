@@ -39,7 +39,6 @@ $marqueeMaxHeight: em(512px);
   }
 
   .logo.home-link, .header-bar-block {
-    min-height: $logoIcoHeight;
     height: $logoIcoHeight;
     line-height: $logoIcoHeight;
   }
@@ -53,13 +52,13 @@ $marqueeMaxHeight: em(512px);
       width: $logoIcoWidth;
       height: $logoIcoHeight;
       background: url('../images/sprite-ico-swallow.svg') $clear no-repeat top center;
-      background-size: em(26px) auto;
+      background-size: em(28px) auto;
     }
 
     // taking care
     .home-label {
       display: inline-block;
-      vertical-align: bottom;
+      vertical-align: middle;
       line-height: normal;
       font-size: $b-fontSize-s;
     }
@@ -93,6 +92,16 @@ $marqueeMaxHeight: em(512px);
 
 // ----- Modules ----- //
 
+.date {
+  display: block;
+  color: $blueGrey0;
+  font-family: $b-sans-fontFamily;
+  font-size: $b-fontSize-s;
+  text-transform: uppercase;
+  font-weight: 300;
+  letter-spacing: 1px; 
+}
+
 .text-col {
   max-width: em(540px);
   padding: 0 $b-space-4;
@@ -106,12 +115,6 @@ $marqueeMaxHeight: em(512px);
   position: relative;
   height: 100vh;
 
-  // .marquee-album {
-  //   display: table;
-  //   width: 100%;
-  //   position: relative;
-  // }
-
   .slide-frame {
     width: 100vw;
   }
@@ -124,19 +127,30 @@ $marqueeMaxHeight: em(512px);
     overflow: hidden;
     background: $black no-repeat center center;
     background-size: cover;
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    @include opacity(0);
+    transition: opacity 1s ease;
+
+    &.current {
+      z-index: 3;
+      @include opacity(100);
+    }
 
     // SLIDES -
-    &#slide-1 {
+    &.slide-1 {
       background-image: url(../images/slideshow/mom-breakaway-open-sea.jpg);
     }
 
-    // &#slide-1 {
-    //   background-image: url(../images/slideshow/memoriam-2-mom-dad-wedding.jpg);
-    // }
+    &.slide-2 {
+      background-image: url(../images/slideshow/memoriam-1-mom-solo-red-dress.jpg);
+    }
 
-    // &#slide-1 {
-    //   background-image: url(../images/slideshow/memoriam-1-mom-solo-red-dress.jpg);
-    // }
+    &.slide-3 {
+      background-image: url(../images/slideshow/memoriam-2-mom-dad-wedding.jpg);
+    }
   }
 }
 
@@ -178,7 +192,7 @@ $marqueeMaxHeight: em(512px);
         display: inline-block;
         width: em(40px, 24px);
         height: em(40px, 24px);
-        background: rgba(255, 255, 255, 0.36);
+        background-color: rgba(141, 165, 179, 0.36);
         border-radius: 50%;
         text-align: center;
         font-size: $b-fontSize-xl;
@@ -186,12 +200,8 @@ $marqueeMaxHeight: em(512px);
         border: $b-borderWidth-xs solid $clear;
         transition: background-color 0.3s ease;
 
-        .fa {
-          vertical-align: middle;
-        }
-
         &:focus, &:hover {
-          background-color: rgba(141, 165, 179, 0.36);
+          background-color: rgba(255, 255, 255, 0.36);
         }
       }
   }

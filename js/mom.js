@@ -1,12 +1,17 @@
 (function ($) {
   'use strict';
 
+  var TakingCare = {};
+
   $(function () {
 
-    var $homeSlideshow = $('#marquee-album'),
-    $body = $('body'),
-    $marqueeMain = $('.marquee-main'),
-    headerWaypoint;
+    var $body = $('body'),
+        $marqueeMain = $('.marquee-main'),
+        $homeSlideshow = $('#home-slideshow'),
+        $homeSlides = $homeSlideshow.find('.image-window'),
+        $homeSlideRefreshBtn = $('.slide-controls .slide-refresh-btn'),
+        homeSlidesArr = [],
+        headerWaypoint;
 
     // $homeSlideshow.slick({
     //   adaptiveHeight: true,
@@ -16,6 +21,31 @@
     //   nextArrow: '<button type="button" class="slick-next p-abs">&#x276f;</button>',
     //   slide: '.slide-frame',
     // });
+
+    TakingCare.currSlideIndex = 0;
+
+    // Home Slides: init
+    if ($homeSlides.length) {
+      $homeSlides.removeClass('current');
+      $homeSlides.first().addClass('current');
+
+      // click handler
+      $marqueeMain.on('click', '.slide-refresh-btn', function (ev) {
+        ev.preventDefault();
+        
+        var numSlides = $homeSlides.length;
+        
+        if (TakingCare.currSlideIndex === numSlides-1) {
+          TakingCare.currSlideIndex = 0;
+        } else {
+          TakingCare.currSlideIndex += 1;
+        }   
+        
+        $homeSlides.removeClass('current');
+        $homeSlides.eq(TakingCare.currSlideIndex).addClass('current');
+
+      });  
+    }
 
     // Waypoints
     headerWaypoint = new Waypoint({
@@ -33,6 +63,6 @@
         return -marqueeHeight; 
       }
     });
-
   });
+
 })(jQuery);
