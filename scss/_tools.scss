@@ -107,6 +107,11 @@
   width: 100%;
   max-width: $b-maxWidth;
 
+  // max: $g-l
+  &.max-gl {
+    max-width: $g-l;
+  }
+
   // max: $g-m
   &.max-gm {
     max-width: $g-m;
@@ -195,10 +200,28 @@
 
 .h1 { 
   font-size: $b-fontSize-xxl;
+  color: $blue0;
   
   @media (min-width: $g-m) {
     font-size: $b-fontSize-h1;
   } 
+}
+
+.h2 {
+  font-size: $b-fontSize-h2;
+  color: $blueGrey0;
+
+  @media (min-width: $g-m) {
+    font-size: $b-fontSize-xxl;
+  }
+}
+
+.h3 {
+  font-size: $b-fontSize-h3;
+
+  @media (min-width: $g-m) {
+    font-size: $b-fontSize-xl;
+  }
 }
 
 .m--ts-xl {
@@ -287,6 +310,10 @@ strong, .bold {
 
 .bg-grey0 {
   background-color: $grey0;
+}
+
+.bg-blueGrey1 {
+  background-color: $blueGrey1;
 }
 
 
@@ -673,6 +700,14 @@ strong, .bold {
 // ----- Responsive Padding ----- //
 
 // breakpoint m
+.m--px5 {
+  @media (min-width: $g-m) {
+    padding-left: $b-space-5;
+    padding-right: $b-space-5;
+  }
+}
+
+
 
 // -------------------------------------
 //   FX

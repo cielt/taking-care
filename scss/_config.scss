@@ -19,6 +19,7 @@
 
 $blue0: #4A90E2;
 $blueGrey0: #91A1B3;
+$blueGrey1: #E5EAF0;
 
 $grey0: #fafafa;
 $grey1: #f4f4f4;
@@ -34,7 +35,7 @@ $clear: transparent;
 // ----- Context Names ----- //
 
 $c-background: $white;
-$c-text: $grey5;
+$c-text: $black;
 
 // -------------------------------------
 //   Base
@@ -51,7 +52,7 @@ $b-fontSize-xs: em(12px);
 $b-fontSize-s: em(14px);
 $b-fontSize-l: em(18px);
 $b-fontSize-xl: em(24px);
-$b-fontSize-xxl: em(32px);
+$b-fontSize-xxl: em(30px);
 $b-fontSize-h1: em(40px);
 $b-fontSize-h2: $b-fontSize-xl;
 $b-fontSize-h3: $b-fontSize-l;
@@ -92,7 +93,7 @@ $b-space-6: em(60px);
 $g-xs: em(480px);
 $g-s: em(768px);
 $g-m: em(959px);
-$g-l: em(1088px); // $g-s, $g-l not yet in use in grid classes
+$g-l: em(1200px); // $g-s, $g-l not yet in use in grid classes
 
 // Settings
 

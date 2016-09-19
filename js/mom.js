@@ -59,7 +59,6 @@
       },
       offset: function () {
         var marqueeHeight = this.element.outerHeight();
-        console.log('offset '+ marqueeHeight);
         return -marqueeHeight; 
       }
     });

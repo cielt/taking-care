@@ -89,7 +89,7 @@ h3, .h3,
 h4, .h4,
 h5, .h5,
 h6, .h6 {
-  font-weight: bold;
+  font-weight: normal;
   line-height: 1.2;
   margin-top: 0; // use tool class for other spacing attributes
 }
@@ -167,7 +167,7 @@ address {
   height: 0;
   width: auto;
   margin: 0;
-  border-bottom: $b-borderWidth-xs solid $blueGrey0;
+  border-bottom: $b-borderWidth-xs solid $grey2;
 }
 
 // -------------------------------------
