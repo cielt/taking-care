@@ -187,28 +187,59 @@ $marqueeMaxHeight: em(512px);
   } 
 
   .slide-controls {
-      position: absolute;
-      z-index: 3;
-      bottom: 0;
-      left: 0;
-      margin: $b-space-2;
-  
-      .slide-refresh-btn {
-        display: inline-block;
-        width: em(40px, 24px);
-        height: em(40px, 24px);
-        background-color: rgba(141, 165, 179, 0.36);
-        border-radius: 50%;
-        text-align: center;
-        font-size: $b-fontSize-xl;
-        line-height: em(40px, 24px);
-        border: $b-borderWidth-xs solid $clear;
-        transition: background-color 0.3s ease;
+    position: absolute;
+    z-index: 3;
+    bottom: 0;
+    left: 0;
+    margin: $b-space-2;
+    
+    .slide-refresh-btn {
+      display: inline-block;
+      width: em(40px, 24px);
+      height: em(40px, 24px);
+      background-color: rgba(141, 165, 179, 0.36);
+      border-radius: 50%;
+      text-align: center;
+      font-size: $b-fontSize-xl;
+      line-height: em(40px, 24px);
+      border: $b-borderWidth-xs solid $clear;
+      transition: background-color 0.3s ease;
 
-        &:focus, &:hover {
-          background-color: rgba(255, 255, 255, 0.36);
-        }
+      &:focus, &:hover {
+        background-color: rgba(255, 255, 255, 0.36);
       }
+    }
+  }
+}
+
+
+// -------------------------------------
+//  Section Components
+// -------------------------------------
+
+// TODO: this will probably change
+.section-header {
+  line-height: em(36px);
+
+  .section-title {
+    text-align: left;
+    line-height: 36px;
+    letter-spacing: 1px;
+    font-weight: 700;
+  }
+}
+
+.section-actions {
+  font-family: $b-sans-fontFamily;
+  font-size: $b-fontSize-s;
+  color: $blueGrey0;
+  line-height: normal;
+  vertical-align: bottom;
+
+  .h-divider {
+    display: inline-block;
+    margin: 0 em(10px);
+    color: $grey3;
   }
 }
 
@@ -260,7 +291,7 @@ $m--tileImgH: 300px;
     width: em($tileImgW);
     height: em($tileImgH);
     overflow: hidden;
-  
+    
     img { 
       position: relative;
       z-index: 1; 
@@ -326,6 +357,33 @@ $m--tileImgH: 300px;
 
   .tile-info .tile-title {
     color: $blue0;
+  }
+}
+
+// -------------------------------------
+//  Stories - Feed
+// -------------------------------------
+
+.story-block {
+  .story-author {
+    text-align: center;
+    
+    .author-tn.tn-round {
+      @extend .mx-auto;
+      width: em(128px);
+      height: em(128px);
+      border-radius: 50%;  
+      overflow: hidden;
+    }
+
+    .author-name {
+      font-family: $b-sans-fontFamily;
+      font-weight: 700;
+    }
+  }
+
+  .story-excerpt {
+    @extend .pa-4;
   }
 }
 

@@ -8,7 +8,6 @@
   <title>Taking Care | Remembering Mom</title>
   <script src="https://use.fontawesome.com/3befb0232d.js"></script>
   <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400italic,700" rel="stylesheet" type="text/css">
-  <link href="https://fonts.googleapis.com/css?family=Oswald:300,400" rel="stylesheet" type='text/css'>
   <link rel="stylesheet" href="css/screen.css">
 </head>
 <body>
@@ -32,7 +31,7 @@
         <!-- Images -->
         <div class="marquee-main w-max mx-auto p-rel">
           <div class="title-block p-abs z2">
-            <h1 class="site-title tf-sans">For Mom</h1>
+            <h1 class="site-title tf-sans mb-0">For Mom</h1>
             <h2 class="site-description tf-serif italic normal">in loving memory</h2>
           </div>
           <div id="home-slideshow" class="slideshow p-rel z1">
@@ -46,20 +45,6 @@
           <div class="slide-controls">
             <a href="#" class="slide-refresh-btn c-white"><b class="fa fa-refresh" aria-hidden="true"></b></a>
           </div>
-          <!-- <div id="home-slideshow" class="slideshow p-rel z1">
-            <div class="marquee-controls"></div>
-            <div id="marquee-album" class="marquee-album">
-                <div class="slide-frame">
-                  <div id="slide-1" class="image-window t-alignC"></div>
-                </div>
-                <div class="slide-frame">
-                  <div id="slide-2" class="image-window t-alignC"></div>
-                </div>
-                <div class="slide-frame">
-                  <div id="slide-3" class="image-window t-alignC"></div>
-                </div>  
-            </div>
-          </div> -->
         </div>
         <!-- Intro -->
         <div class="section w-max max-gm mx-auto">
@@ -83,7 +68,9 @@
         <!-- Chapters -->
         <div class="section bg-blueGrey1">
           <div class="w-max max-gl mx-auto px-2 m--px5 pt-5 pb-5">
-            <h2 class="h2 c-blueGrey0 mb-2 tf-sans ts-s upper">Chapters</h2>
+            <div class="section-header cf">
+              <h2 class="ts-l c-blueGrey0 mb-2 tf-sans ts-s upper section-title">Chapters</h2>
+            </div>
             <div class="tile-set">
               <!-- 1. Early Years -->
               <a class="tile" href="" data-chapter-index="1">
@@ -171,18 +158,63 @@
               </a>
             </div>  
           </div>  
+        </div>
+        <!-- Stories -->
+        <div class="section bg-white">
+          <div class="w-max max-gl mx-auto px-2 m--px5 pt-5 pb-5">
+            <div class="section-header cf m--t-alignR">
+              <h2 class="ts-l c-blueGrey0 mb-0 tf-sans upper dib fl t-alignL section-title">Stories</h2>
+              <div class="section-actions dib">
+                <!-- TODO: add fa icon -->
+                <a href="#" class="section-heading-cta dib">Read Stories <b class="icon" aria-hidden="true">&#187;</b></a>
+                <span class="h-divider">|</span>
+                <a href="#" class="section-heading-cta dib">Share a Story <b class="icon" aria-hidden="true">&#187;</b></a>
+              </div>
+            </div>
+            <hr class="hairline mt-2 mb-4">
+            <div class="stories cf g">
+              <!-- 1. story -->
+              <div class="story-block g-b g-b--1of1 g-b--m--6of12">
+                <div class="g">
+                  <div class="story-author g-b g-b--1of1 g-b--m--3of12 mb-2 m--mb0">
+                    <div class="author-tn tn-round mb-2">
+                      <img class="fit" src="images/mom-graduation-bw.jpg" alt="">
+                    </div>
+                    <div class="author-name">John Appleseed</div>
+                  </div>
+                  <div class="story-excerpt g-b g-b--1of1 g-b--m--9of12">
+                    <p>This is the story of Mom from a certain time in her life, as recalled by a certain person who remembers something and would like to share it with others who knew her <a href="#" class="continue-link">&hellip;</a></p>
+                  </div>
+                </div>
+              </div>
+              <!-- 2. story -->
+              <div class="story-block g-b g-b--1of1 g-b--m--6of12">
+                <div class="g">
+                  <div class="story-author g-b g-b--1of1 g-b--m--3of12 mb-2 m--mb0">
+                    <div class="author-tn tn-round mb-2">
+                      <img class="fit" src="images/mom-graduation-bw.jpg" alt="">
+                    </div>
+                    <div class="author-name">Betty McFly</div>
+                  </div>
+                  <div class="story-excerpt g-b g-b--1of1 g-b--m--9of12">
+                    <p>This is the story of Mom from a certain time in her life, as recalled by a certain person who remembers something and would like to share it with others who knew her <a href="#" class="continue-link">&hellip;</a></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div> 
       </div>
-        <div class="footer p-rel z1">
-          <div class="w-max mx-auto">
-            <div class="pa-4">Footer content</div>
-          </div>
+      <div class="footer p-rel z1">
+        <div class="w-max mx-auto">
+          <div class="pa-4">Footer content</div>
         </div>
       </div>
     </div>
-    <script src="node_modules/jquery/dist/jquery.min.js"></script>
-    <script src="node_modules/slick-carousel/slick/slick.min.js"></script>
-    <script src="node_modules/waypoints/lib/jquery.waypoints.min.js"></script>
-    <script src="js/mom.js"></script>
-  </body>
-  </html>
+  </div>
+  <script src="node_modules/jquery/dist/jquery.min.js"></script>
+  <script src="node_modules/slick-carousel/slick/slick.min.js"></script>
+  <script src="node_modules/waypoints/lib/jquery.waypoints.min.js"></script>
+  <script src="js/mom.js"></script>
+</body>
+</html>
