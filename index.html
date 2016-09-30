@@ -28,7 +28,7 @@
       </div>
       <div class="main p-rel z2">
         <div class="header-spacing"></div>
-        <!-- Images -->
+        <!-- ################################################## Slideshow ################################################## -->
         <div class="marquee-main w-max mx-auto p-rel">
           <div class="title-block p-abs z2">
             <h1 class="site-title tf-sans mb-0">For Mom</h1>
@@ -43,11 +43,17 @@
             </div>  
           </div>
           <div class="slide-controls">
-            <a href="#" class="slide-refresh-btn c-white"><b class="fa fa-refresh" aria-hidden="true"></b></a>
+            <a href="#" class="slide-control-btn slide-refresh-btn c-white">
+              <b class="fa fa-refresh" aria-hidden="true"></b>
+            </a>
           </div>
+          <a href="#home-intro" class="slide-control-btn scroll-to-content-btn c-white" data-offset="0">
+            <b class="fa fa-angle-down fa-2x" aria-hidden="true"></b>
+            <span class="vis-hidden">scroll down to page content</span>
+          </a>
         </div>
         <!-- Intro -->
-        <div class="section w-max max-gm mx-auto">
+        <div id="home-intro" class="section w-max max-gm mx-auto">
           <div class="pa-2 pt-6 pb-6">
             <div class="text-col mb-5">
               <h1 class="h1 c-blue0 t-alignC normal mb-1">Yen-Sheng Loretta Tu</h1>
@@ -65,7 +71,7 @@
             </div>      
           </div>
         </div>
-        <!-- Chapters -->
+        <!-- ################################################## Chapters ################################################## -->
         <div class="section bg-blueGrey1">
           <div class="w-max max-gl mx-auto px-2 m--px5 pt-5 pb-5">
             <div class="section-header cf">
@@ -86,7 +92,7 @@
                   <h3 class="tile-title h3">Early Years</h3>
                 </div>
               </a>
-              <!-- 2. Student Life -->
+              <!-- 2. NTU -->
               <a class="tile" href="" data-chapter-index="2">
                 <div class="window-frame p-rel mb-1">
                   <img class="fit p-rel z1" src="images/slideshow/tn/mom-graduate-portrait-tn.jpg" alt="">
@@ -95,13 +101,27 @@
                 <div class="tile-info">
                   <div class="cf mb-1">
                     <span class="tile-time meta">1966 &ndash; 1970</span>
-                    <span class="tile-location meta">Carbondale, IL</span>
+                    <span class="tile-location meta">Taipei, Taiwan</span>
                   </div>
-                  <h3 class="tile-title h3">Student Life</h3>
+                  <h3 class="tile-title h3">National Taiwan University</h3>
                 </div>
               </a>
-              <!-- 3. Marriage and Work -->
-              <a class="tile" href="" data-chapter-index="2">
+              <!-- 3. SIU -->
+              <a class="tile" href="" data-chapter-index="3">
+                <div class="window-frame p-rel mb-1">
+                  <img class="fit p-rel z1" src="images/slideshow/tn/mom-siu-campus-tn.jpg" alt="">
+                  <div class="tile-overlay p-abs z2"></div>
+                </div>
+                <div class="tile-info">
+                  <div class="cf mb-1">
+                    <span class="tile-time meta">1970 &ndash; 1972</span>
+                    <span class="tile-location meta">Carbondale, IL</span>
+                  </div>
+                  <h3 class="tile-title h3">Southern Illinois University</h3>
+                </div>
+              </a>
+              <!-- 4. Cornell -->
+              <a class="tile" href="" data-chapter-index="4">
                 <div class="window-frame p-rel mb-1">
                   <img class="fit p-rel z1" src="images/slideshow/tn/mom-dad-wedding-tn.jpg" alt="">
                   <div class="tile-overlay p-abs z2"></div>
@@ -111,11 +131,11 @@
                     <span class="tile-time meta">1972 &ndash; 1976</span>
                     <span class="tile-location meta">Ithaca, NY</span>
                   </div>
-                  <h3 class="tile-title h3">Marriage &amp; Work</h3>
+                  <h3 class="tile-title h3">Cornell University</h3>
                 </div>
               </a>
-              <!-- 4. Family -->
-              <a class="tile" href="" data-chapter-index="1">
+              <!-- 5. Stanford -->
+              <a class="tile" href="" data-chapter-index="5">
                 <div class="window-frame p-rel mb-1">
                   <img class="fit p-rel z1" src="images/slideshow/tn/mom-baby-pong-tn.jpg" alt="">
                   <div class="tile-overlay p-abs z2"></div>
@@ -125,82 +145,114 @@
                     <span class="tile-time meta">1976 &ndash; 1980</span>
                     <span class="tile-location meta">Palo Alto, CA</span>
                   </div>
-                  <h3 class="tile-title h3">Family</h3>
+                  <h3 class="tile-title h3">Stanford University</h3>
                 </div>
               </a>
-              <!-- 5. A Full House -->
-              <a class="tile" href="" data-chapter-index="2">
+              <!-- 6. Cherry Ridge Road -->
+              <a class="tile" href="" data-chapter-index="6">
                 <div class="window-frame p-rel mb-1">
                   <img class="fit p-rel z1" src="images/slideshow/tn/mom-kids-swan-boat-tn.jpg" alt="">
                   <div class="tile-overlay p-abs z2"></div>
                 </div>
                 <div class="tile-info">
                   <div class="cf mb-1">
-                    <span class="tile-time meta">1980 &ndash; 2002</span>
+                    <span class="tile-time meta">1980 &ndash; 1992</span>
                     <span class="tile-location meta">State College, PA</span>
                   </div>
-                  <h3 class="tile-title h3">A Full House</h3>
+                  <h3 class="tile-title h3">115 Cherry Ridge Road</h3>
                 </div>
               </a>
-              <!-- 6. An Empty Nest -->
-              <a class="tile" href="" data-chapter-index="2">
+              <!-- 7. Shagbark Court -->
+              <a class="tile" href="" data-chapter-index="7">
+                <div class="window-frame p-rel mb-1">
+                  <img class="fit p-rel z1" src="images/slideshow/tn/mom-dad-bryce-tn.jpg" alt="">
+                  <div class="tile-overlay p-abs z2"></div>
+                </div>
+                <div class="tile-info">
+                  <div class="cf mb-1">
+                    <span class="tile-time meta">1992 &ndash; 2003</span>
+                    <span class="tile-location meta">State College, PA</span>
+                  </div>
+                  <h3 class="tile-title h3">2399 Shagbark Court</h3>
+                </div>
+              </a>
+              <!-- 8. An Empty Nest -->
+              <a class="tile" href="" data-chapter-index="8">
                 <div class="window-frame p-rel mb-1">
                   <img class="fit p-rel z1" src="images/slideshow/tn/mom-dad-breakaway-tn.jpg" alt="">
                   <div class="tile-overlay p-abs z2"></div>
                 </div>
                 <div class="tile-info">
                   <div class="cf mb-1">
-                    <span class="tile-time meta">2002 &ndash; 2016</span>
+                    <span class="tile-time meta">2004 &ndash; 2016</span>
                     <span class="tile-location meta">State College, PA</span>
                   </div>
-                  <h3 class="tile-title h3">An Empty Nest</h3>
+                  <h3 class="tile-title h3">Empty Nest</h3>
+                </div>
+              </a>
+              <!-- 9. Afterword -->
+              <a class="tile" href="" data-chapter-index="2">
+                <div class="window-frame p-rel mb-1">
+                  <img class="fit p-rel z1" src="images/slideshow/tn/afterword-friends-ccmp-tn.jpg" alt="">
+                  <div class="tile-overlay p-abs z2"></div>
+                </div>
+                <div class="tile-info">
+                  <div class="cf mb-1">
+                    <span class="tile-time meta">2016 &ndash; present</span>
+                    <span class="tile-location meta">State College, PA</span>
+                  </div>
+                  <h3 class="tile-title h3">Afterword</h3>
                 </div>
               </a>
             </div>  
           </div>  
         </div>
-        <!-- Stories -->
+        <!-- ################################################## Stories ################################################## -->
         <div class="section bg-white">
           <div class="w-max max-gl mx-auto px-2 m--px5 pt-5 pb-5">
-            <div class="section-header cf m--t-alignR">
-              <h2 class="ts-l c-blueGrey0 mb-0 tf-sans upper dib fl t-alignL section-title">Stories</h2>
-              <div class="section-actions dib">
+            <div class="section-header cf g">
+              <div class="g-b g-b--1of1 g-b--m--9of12 px-0">
+                <h2 class="ts-l c-blueGrey0 mb-1 m--mb0 tf-sans upper section-title">Stories</h2>
+              </div>
+              <div class="section-actions g-b g-b--1of1 g-b--m--3of12 px-0 m--t-alignR">
                 <!-- TODO: add fa icon -->
-                <a href="#" class="section-heading-cta dib">Read Stories <b class="icon" aria-hidden="true">&#187;</b></a>
+                <a href="#" class="section-heading-cta">Read Stories <b class="icon" aria-hidden="true">&#187;</b></a>
                 <span class="h-divider">|</span>
-                <a href="#" class="section-heading-cta dib">Share a Story <b class="icon" aria-hidden="true">&#187;</b></a>
+                <a href="#" class="section-heading-cta">Share a Story <b class="icon" aria-hidden="true">&#187;</b></a>
               </div>
             </div>
             <hr class="hairline mt-2 mb-4">
-            <div class="stories cf g">
-              <!-- 1. story -->
-              <div class="story-block g-b g-b--1of1 g-b--m--6of12">
-                <div class="g">
-                  <div class="story-author g-b g-b--1of1 g-b--m--3of12 mb-2 m--mb0">
-                    <div class="author-tn tn-round mb-2">
-                      <img class="fit" src="images/mom-graduation-bw.jpg" alt="">
+            <div class="stories cf">
+              <ul class="stories-list list-reset">
+                <!-- 1. story -->
+                <li class="story-item">
+                  <div class="g">
+                    <div class="story-author g-b g-b--1of1 g-b--m--4of12 mb-2 m--mb0">
+                      <div class="author-tn tn-round mb-2">
+                        <img class="fit" src="images/mom-graduation-bw.jpg" alt="">
+                      </div>
+                      <div class="author-name">John Appleseed</div>
                     </div>
-                    <div class="author-name">John Appleseed</div>
-                  </div>
-                  <div class="story-excerpt g-b g-b--1of1 g-b--m--9of12">
-                    <p>This is the story of Mom from a certain time in her life, as recalled by a certain person who remembers something and would like to share it with others who knew her <a href="#" class="continue-link">&hellip;</a></p>
-                  </div>
-                </div>
-              </div>
-              <!-- 2. story -->
-              <div class="story-block g-b g-b--1of1 g-b--m--6of12">
-                <div class="g">
-                  <div class="story-author g-b g-b--1of1 g-b--m--3of12 mb-2 m--mb0">
-                    <div class="author-tn tn-round mb-2">
-                      <img class="fit" src="images/mom-graduation-bw.jpg" alt="">
+                    <div class="story-excerpt g-b g-b--1of1 g-b--m--8of12">
+                      <p>This is the story of Mom from a certain time in her life, as recalled by a certain person who remembers something and would like to share it with others who knew her <a href="#" class="continue-link">&hellip;</a></p>
                     </div>
-                    <div class="author-name">Betty McFly</div>
                   </div>
-                  <div class="story-excerpt g-b g-b--1of1 g-b--m--9of12">
-                    <p>This is the story of Mom from a certain time in her life, as recalled by a certain person who remembers something and would like to share it with others who knew her <a href="#" class="continue-link">&hellip;</a></p>
+                </li>
+                <!-- 2. story -->
+                <li class="story-item">
+                  <div class="g">
+                    <div class="story-author g-b g-b--1of1 g-b--m--4of12 mb-2 m--mb0">
+                      <div class="author-tn tn-round mb-2">
+                        <img class="fit" src="images/mom-graduation-bw.jpg" alt="">
+                      </div>
+                      <div class="author-name">Betty McFly</div>
+                    </div>
+                    <div class="story-excerpt g-b g-b--1of1 g-b--m--8of12">
+                      <p>This is the story of Mom from a certain time in her life, as recalled by a certain person who remembers something and would like to share it with others who knew her <a href="#" class="continue-link">&hellip;</a></p>
+                    </div>
                   </div>
-                </div>
-              </div>
+                </li>
+              </ul>
             </div>
           </div>
         </div> 
@@ -215,6 +267,7 @@
   <script src="node_modules/jquery/dist/jquery.min.js"></script>
   <script src="node_modules/slick-carousel/slick/slick.min.js"></script>
   <script src="node_modules/waypoints/lib/jquery.waypoints.min.js"></script>
+  <script src="js/utilities.js"></script>
   <script src="js/mom.js"></script>
 </body>
 </html>

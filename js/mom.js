@@ -7,11 +7,13 @@
 
     var $body = $('body'),
         $marqueeMain = $('.marquee-main'),
+        $marqueeRefreshBtn = $marqueeMain.find('.slide-refresh-btn'),
         $homeSlideshow = $('#home-slideshow'),
         $homeSlides = $homeSlideshow.find('.image-window'),
         $homeSlideRefreshBtn = $('.slide-controls .slide-refresh-btn'),
         homeSlidesArr = [],
-        headerWaypoint;
+        headerWaypoint,
+        $scrollDownArrow = $marqueeMain.find('.slide-control-btn.scroll-to-content-btn');
 
     // $homeSlideshow.slick({
     //   adaptiveHeight: true,
@@ -30,7 +32,7 @@
       $homeSlides.first().addClass('current');
 
       // click handler
-      $marqueeMain.on('click', '.slide-refresh-btn', function (ev) {
+      $marqueeRefreshBtn.on('click', function (ev) {
         ev.preventDefault();
         
         var numSlides = $homeSlides.length;
@@ -39,13 +41,15 @@
           TakingCare.currSlideIndex = 0;
         } else {
           TakingCare.currSlideIndex += 1;
-        }   
+        }  
         
         $homeSlides.removeClass('current');
         $homeSlides.eq(TakingCare.currSlideIndex).addClass('current');
-
-      });  
+      });
     }
+
+    // scroll-down arrow
+    $scrollDownArrow.arctic_scroll();
 
     // Waypoints
     headerWaypoint = new Waypoint({
@@ -59,7 +63,7 @@
       },
       offset: function () {
         var marqueeHeight = this.element.outerHeight();
-        return -marqueeHeight; 
+        return -marqueeHeight;
       }
     });
   });

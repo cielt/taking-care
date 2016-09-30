@@ -220,7 +220,7 @@
   font-size: $b-fontSize-h3;
 
   @media (min-width: $g-m) {
-    font-size: $b-fontSize-xl;
+    font-size: em(20px);
   }
 }
 
@@ -505,6 +505,11 @@ strong, .bold {
 
 // ----- Responsive Margin ----- //
 
+.m--mb0 {
+  @media (min-width: $g-m) {
+    margin-bottom: 0;
+  }
+}
 
 // -------------------------------------
 //   Padding
