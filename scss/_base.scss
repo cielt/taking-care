@@ -144,6 +144,10 @@ h6, .h6 {
 p {
   margin: 0 auto $b-space-4;
   line-height: $b-lineHeight;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
 
 .preview {
