@@ -241,6 +241,10 @@
   color: $blue0 !important;
 }
 
+.c-grey3 {
+  color: $grey3 !important;
+}
+
 .c-blueGrey0 {
   color: $blueGrey0 !important;
 }
@@ -739,8 +743,16 @@ strong, .bold {
 //   Vertical Align
 // -------------------------------------
 
+.has-ico-swallow {
+  line-height: em(34px, 20px);
+}
+
 .lh-reset {
   line-height: normal;
+}
+
+.va-t {
+  vertical-align: top;
 }
 
 .va-m {

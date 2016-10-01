@@ -30,6 +30,16 @@ $marqueeMaxHeight: em(512px);
 }
 
 
+// ----- Ico ~ Swallow ----- //
+
+.ico-swallow {
+  width: $logoIcoWidth;
+  height: $logoIcoHeight;
+  background: url('../images/sprite-ico-swallow.svg') $clear no-repeat top center;
+  background-size: em(28px) auto;
+}
+
+
 // ----- Header ----- //
 
 .header-bar {
@@ -62,13 +72,6 @@ $marqueeMaxHeight: em(512px);
     color: $white;
     letter-spacing: em(0.5px);
     transition: all 0.3s ease;
-
-    .ico-swallow {
-      width: $logoIcoWidth;
-      height: $logoIcoHeight;
-      background: url('../images/sprite-ico-swallow.svg') $clear no-repeat top center;
-      background-size: em(28px) auto;
-    }
 
     // taking care
     .home-label {
@@ -443,6 +446,11 @@ $m--tileImgH: 300px;
   background: $grey5;
 }
 
+.footer-content {
+  @extend .c-white;
+
+}
+
 
 // -------------------------------------
 //   Media Queries
@@ -471,32 +479,33 @@ $m--tileImgH: 300px;
    Animations
    ========================================================================== */
 
-   @-webkit-keyframes bounce {
-    0%, 10%, 25%, 40%, 50% {
-      -webkit-transform: translateY(0);
-      transform: translateY(0);
-    }
-    20% {
-      -webkit-transform: translateY(-10px);
-      transform: translateY(-10px);
-    }
-    30% {
-      -webkit-transform: translateY(-5px);
-      transform: translateY(-5px);
-    }
+ @-webkit-keyframes bounce {
+  0%, 10%, 25%, 40%, 50% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
   }
-  @keyframes bounce {
-    0%, 10%, 25%, 40%, 50% {
-      -webkit-transform: translateY(0);
-      transform: translateY(0);
-    }
-    20% {
-      -webkit-transform: translateY(-10px);
-      transform: translateY(-10px);
-    }
-    30% {
-      -webkit-transform: translateY(-5px);
-      transform: translateY(-5px);
-    }
+  20% {
+    -webkit-transform: translateY(-10px);
+    transform: translateY(-10px);
   }
+  30% {
+    -webkit-transform: translateY(-5px);
+    transform: translateY(-5px);
+  }
+}
+
+@keyframes bounce {
+  0%, 10%, 25%, 40%, 50% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  20% {
+    -webkit-transform: translateY(-10px);
+    transform: translateY(-10px);
+  }
+  30% {
+    -webkit-transform: translateY(-5px);
+    transform: translateY(-5px);
+  }
+}
 

@@ -146,6 +146,12 @@ p {
   line-height: $b-lineHeight;
 }
 
+.preview {
+  font-weight: 300;
+  font-family: $b-sans-fontFamily;
+  line-height: $b-lineHeight-compact;
+}
+
 // forms, etc.
 
 fieldset {
@@ -178,10 +184,24 @@ address {
 a, a:active, a:visited {
   color: $blue0;
   text-decoration: underline;
+  -webkit-transition: color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out;
 }
 
 a:hover {
   text-decoration: none;
+}
+
+.footer-content a {
+  color: $grey3;
+  font-family: $b-sans-fontFamily;
+  font-weight: 700;
+  text-decoration: none;
+
+  &:hover, &:focus {
+    text-decoration: underline;
+    color: $white;
+  }
 }
 
 // -------------------------------------
