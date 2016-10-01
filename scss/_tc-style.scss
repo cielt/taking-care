@@ -312,12 +312,12 @@ $m--tileImgH: 300px;
     margin: 0 auto em(20px);
 
     @media (min-width: $g-m) {
-      width: 30%;
+      width: 32%;
       height: em($m--tileH);
       float: left;
 
       &:nth-child(3n+2) {
-        margin: 0 5% em(20px);
+        margin: 0 2% em(20px);
       }
     }
   }
@@ -350,7 +350,6 @@ $m--tileImgH: 300px;
     }
 
     @media (min-width: $g-m) {
-      //width: em($m--tileImgW);
       height: em($m--tileImgH);    
     }
   }
@@ -404,10 +403,6 @@ $m--tileImgH: 300px;
 //  Stories - Feed
 // -------------------------------------
 
-.stories-list {
-
-}
-
 .story-item {
 
   @media (min-width: $g-s) {
@@ -437,9 +432,6 @@ $m--tileImgH: 300px;
   }
 }
 
-.story-excerpt {
-  @extend .pa-4;
-}
 }
 
 
