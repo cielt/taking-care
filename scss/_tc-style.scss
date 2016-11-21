@@ -311,13 +311,11 @@ $m--tileImgH: 300px;
     display: inline-block;
     width: em($tileW);
     height: em($tileH);
-    float: none;
     margin: 0 auto em(20px);
 
     @media (min-width: $g-m) {
-      width: 32%;
+      width: em($m--tileW);
       height: em($m--tileH);
-      float: left;
 
       &:nth-child(3n+2) {
         margin: 0 2% em(20px);
@@ -353,6 +351,7 @@ $m--tileImgH: 300px;
     }
 
     @media (min-width: $g-m) {
+      width: 100%;
       height: em($m--tileImgH);    
     }
   }
@@ -374,13 +373,9 @@ $m--tileImgH: 300px;
     }
 
     .tile-location {
-      width: em(140px, 14px);
+      width: em(154px, 14px);
       text-align: right;
       float: right;
-
-      @media (min-width: $g-m) {
-        width: em(180px, 14px);  
-      }
     }
 
     .tile-title {
