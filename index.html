@@ -10,47 +10,38 @@
   <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400italic,700" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="css/screen.css">
 </head>
-<body>
+<body class="nav-closed">
   <div class="page">
     <div class="scaffold-outer p-rel">
-      <!-- global header -->
-      <div class="header-bar">
-        <div class="header-bar-context p-rel">
-          <div class="overlay"></div>
-          <div class="content px-3 pt-2 pb-2 p-rel z2 cf">
-            <a class="logo home-link t-decor-none db fl" href="/">
-              <span class="ico ico-swallow dib mr-1 va-m lh-reset"></span><em class="home-label">Taking Care</em>
-            </a>
-            <div class="header-bar-block fr">
-              <a href="#" class="menu-btn"><b class="fa fa-bars dib mr-1" aria-hidden="true"></b> Menu</a>
-              <!-- global nav -->
-              <div class="global-nav-block dn">
-                <ul class="global-nav">
-                  <li class="g-nav-item g-nav-home">
-                    <a href="#" class="home">Home</a>
-                  </li>
-                  <li class="g-nav-item g-nav-chapter-1">
-                    <a href="#" class="chapter-1">Early Years</a>
-                  </li>
-                  <li class="g-nav-item g-nav-chapter-2">
-                    <a href="#" class="chapter-2">National Taiwan University</a>
-                  </li>
-                </ul>
+      <!-- Nav Drawer -->
+      <div class="site-nav-block pa-4">
+        <div class="site-nav-wrapper">
+          <h3 id="site-menu" class="menu tf-sans ts-s mb-5 upper c-blueGrey0 bold">Menu</h3>
+          <a href="#" id="close-menu-btn" class="close-menu">
+            <b class="fa fa-times" aria-hidden="true"></b><span class="vis-hidden">Close Menu</span>
+          </a>
+          <ul class="site-nav-menu">
+            <li class="site-nav-item nav-home" role="presentation"><a href="#" class="site-nav-link link-home">Home</a></li>
+            <li class="site-nav-item nav-early-years" role="presentation"><a href="#" class="site-nav-link link-early-year">Early Years</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="scaffold-inner">
+        <div class="menu-overlay dn"></div>
+        <!-- global header -->
+        <div class="header-bar">
+          <div class="header-bar-context p-rel">
+            <div class="overlay"></div>
+            <div class="content px-3 pt-2 pb-2 p-rel z2 cf">
+              <a class="logo home-link t-decor-none db fl" href="/">
+                <span class="ico ico-swallow dib mr-1 va-m lh-reset"></span><em class="home-label">Taking Care</em>
+              </a>
+              <div class="header-bar-block fr">
+                <a href="#" id="global-menu-btn" class="menu-btn"><b class="fa fa-bars dib mr-1" aria-hidden="true"></b> Menu</a>
               </div>
             </div>
           </div>
         </div>
-      </div>
-      <!-- Nav Drawer -->
-      <div class="site-nav">
-        <h3 id="site-menu" class="menu">Menu</h3>
-        <a href="#" class="close-menu"><b class="fa fa-times" aria-hidden="true"></b><span class="vis-hidden">Close Menu</span></a>
-        <ul class="site-nav">
-          <li class="nav-home" role="presentation"><a href="#" class="link-home">Home</a></li>
-          <li class="nav-early-years" role="presentation"><a href="#" class="link-early-year">Early Years</a></li>
-        </ul>
-      </div>
-      <div class="scaffold-inner">
         <div class="main p-rel z2">
           <div class="header-spacing"></div>
           <!-- ################################################## Slideshow ################################################## -->

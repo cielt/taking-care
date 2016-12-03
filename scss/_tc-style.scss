@@ -240,9 +240,82 @@ $marqueeMaxHeight: em(512px);
 //   Global Navigation
 // -------------------------------------
 
-.site-nav {
-  @extend .list-reset;
+.site-nav-block {
+  color: $white;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  width: em(240px);
+  background: $black;
+  -webkit-transition: -webkit-transform 0.3s ease, opacity 0s ease 0s;
+  transition: transform 0.3s ease, opacity 0s ease 0s;
 }
+
+.site-nav-wrapper {
+  position: relative;
+}
+
+.site-nav-menu {
+  @extend .list-reset;
+  font-size: $b-fontSize-s;
+
+  .site-nav-item {
+    margin-bottom: $b-space-2;
+  }
+
+  .site-nav-link {
+    color: $grey4;
+    text-decoration: none;
+
+    &:hover, &:focus {
+      color: $grey0;
+    }
+  }
+}
+
+.close-menu {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: $blueGrey0 !important;
+  font-size: $b-fontSize-s;
+  height: em(20px, 14px);
+  line-height: em(16px, 14px);
+  width: em(20px, 14px);
+  text-align: center;
+}
+
+// ----- Layers ----- //
+
+.scaffold-inner {
+  position: relative;
+  z-index: 2;
+  min-height: 100%;
+  background: $white;
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: transform 0.3s ease;
+}
+
+// ----- Global Nav ----- //
+
+.nav-open {
+  .site-nav-block {
+    -webkit-transform: translate3D(0, 0, 0);
+    -ms-transform: translate3D(0, 0, 0);
+    transform: translate3D(0, 0, 0);
+  }
+
+  .scaffold-inner {
+    overflow: hidden;
+    -webkit-transform: translate3D(em(-240px), 0, 0);
+    -ms-transform: translate3D(em(-240px), 0, 0);
+    transform: translate3D(em(-240px), 0, 0);
+  }
+}
+
 
 
 // -------------------------------------
@@ -281,6 +354,7 @@ $marqueeMaxHeight: em(512px);
     color: $grey3;
   }
 }
+
 
 // -------------------------------------
 //  Tiles
@@ -392,6 +466,7 @@ $m--tileImgH: 300px;
     color: $blue0;
   }
 }
+
 
 // -------------------------------------
 //  Stories - Feed

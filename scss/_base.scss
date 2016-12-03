@@ -201,12 +201,12 @@ a:hover {
 }
 
 .footer-content a {
-  color: $blueGrey1;
+  color: $grey3;
   font-family: $b-sans-fontFamily;
   font-weight: 700;
 
   &:hover, &:focus {
-    color: $blueGrey2;
+    color: $grey0;
   }
 }
 

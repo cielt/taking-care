@@ -6,6 +6,7 @@
   $(function () {
 
     var $body = $('body'),
+        $globalMenuBtns = $('#global-menu-btn, #close-menu-btn, .menu-overlay'),
         $marqueeMain = $('.marquee-main'),
         $marqueeRefreshBtn = $marqueeMain.find('.slide-refresh-btn'),
         $homeSlideshow = $('#home-slideshow'),
@@ -25,6 +26,14 @@
     // });
 
     TakingCare.currSlideIndex = 0;
+
+    // Global Nav Menu
+    if ($globalMenuBtns.length) {
+      $globalMenuBtns.on('click', function (ev) {
+        ev.preventDefault();
+        $body.toggleClass('nav-open nav-closed');     
+      });
+    }
 
     // Home Slides: init
     if ($homeSlides.length) {
