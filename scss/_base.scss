@@ -186,7 +186,7 @@ address {
 // -------------------------------------
 
 a, a:active, a:visited {
-  color: $blue0;
+  color: inherit;
   text-decoration: underline;
   -webkit-transition: color 0.3s ease-in-out;
   transition: color 0.3s ease-in-out;
@@ -196,15 +196,17 @@ a:hover {
   text-decoration: none;
 }
 
+.section a {
+  color: $blue0;    
+}
+
 .footer-content a {
-  color: $grey3;
+  color: $blueGrey1;
   font-family: $b-sans-fontFamily;
   font-weight: 700;
-  text-decoration: none;
 
   &:hover, &:focus {
-    text-decoration: underline;
-    color: $white;
+    color: $blueGrey2;
   }
 }
 

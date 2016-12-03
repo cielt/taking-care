@@ -16,20 +16,6 @@ $marqueeMaxHeight: em(512px);
 //   Global
 // -------------------------------------
 
-
-// ----- a ----- //
-
-.section-header {
-  a:link, a:active, a:visited {
-    text-decoration: none;
-  }
-
-  a:hover {
-    text-decoration: underline;
-  }
-}
-
-
 // ----- Ico ~ Swallow ----- //
 
 .ico-swallow {
@@ -251,6 +237,15 @@ $marqueeMaxHeight: em(512px);
 
 
 // -------------------------------------
+//   Global Navigation
+// -------------------------------------
+
+.site-nav {
+  @extend .list-reset;
+}
+
+
+// -------------------------------------
 //  Section Components
 // -------------------------------------
 
@@ -308,6 +303,7 @@ $m--tileImgH: 300px;
 
   .tile {
     @extend .pa-2;
+    @extend .va-t;
     display: inline-block;
     width: em($tileW);
     height: em($tileH);
@@ -438,7 +434,7 @@ $m--tileImgH: 300px;
 // -------------------------------------
 
 .footer {
-  background: $grey5;
+  background: $navy0;
 }
 
 .footer-content {
