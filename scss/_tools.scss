@@ -204,7 +204,7 @@
   
   @media (min-width: $g-m) {
     font-size: $b-fontSize-h1;
-  } 
+  }
 }
 
 .h2 {
@@ -230,6 +230,11 @@
   }
 }
 
+.xs--ts-h1 {
+  @media (min-width: $g-xs) {
+    font-size: $b-fontSize-xxl;
+  }
+}
 
 // ----- Color ----- //
 
