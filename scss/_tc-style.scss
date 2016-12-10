@@ -299,20 +299,41 @@ $marqueeMaxHeight: em(512px);
   transition: transform 0.3s ease;
 }
 
+// overlay - for when nav drawer is open
+
+.menu-overlay {
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
 // ----- Global Nav ----- //
 
 .nav-open {
+  overflow: hidden;
+
   .site-nav-block {
+    overflow: auto;
     -webkit-transform: translate3D(0, 0, 0);
     -ms-transform: translate3D(0, 0, 0);
     transform: translate3D(0, 0, 0);
   }
 
   .scaffold-inner {
+    height: 100%;
     overflow: hidden;
     -webkit-transform: translate3D(em(-240px), 0, 0);
     -ms-transform: translate3D(em(-240px), 0, 0);
     transform: translate3D(em(-240px), 0, 0);
+  }
+
+  .menu-overlay {
+    display: block;
+    z-index: 9;
   }
 }
 

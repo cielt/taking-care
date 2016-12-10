@@ -14,16 +14,8 @@
         $homeSlideRefreshBtn = $('.slide-controls .slide-refresh-btn'),
         homeSlidesArr = [],
         headerWaypoint,
-        $scrollDownArrow = $marqueeMain.find('.slide-control-btn.scroll-to-content-btn');
-
-    // $homeSlideshow.slick({
-    //   adaptiveHeight: true,
-    //   appendArrows: $('.marquee-controls'),
-    //   dots: false,
-    //   prevArrow: '<button type="button" class="slick-prev p-abs">&#x276e;</button>',
-    //   nextArrow: '<button type="button" class="slick-next p-abs">&#x276f;</button>',
-    //   slide: '.slide-frame',
-    // });
+        $scrollDownArrow = $marqueeMain.find('.slide-control-btn.scroll-to-content-btn'),
+        $siteNavBlock = $('.site-nav-block');
 
     TakingCare.currSlideIndex = 0;
 
@@ -31,7 +23,8 @@
     if ($globalMenuBtns.length) {
       $globalMenuBtns.on('click', function (ev) {
         ev.preventDefault();
-        $body.toggleClass('nav-open nav-closed');     
+        $body.toggleClass('nav-open nav-closed');
+        $siteNavBlock.scrollTop(0);     
       });
     }
 
