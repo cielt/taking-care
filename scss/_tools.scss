@@ -717,14 +717,6 @@ strong, .bold {
 
 // ----- Responsive Padding ----- //
 
-// breakpoint m
-.m--px5 {
-  @media (min-width: $g-m) {
-    padding-left: $b-space-5;
-    padding-right: $b-space-5;
-  }
-}
-
 
 
 // -------------------------------------

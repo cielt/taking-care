@@ -108,8 +108,11 @@ $marqueeMaxHeight: em(512px);
 
 .text-col {
   max-width: em(640px);
-  padding: 0 $b-space-4;
   margin: 0 auto;
+
+  @media (min-width: $g-s) {
+    padding: 0 $b-space-4;
+  }
 }
 
 // marquee image frame
@@ -397,12 +400,18 @@ $m--tileImgH: 300px;
   text-align: center;
 
   .tile {
-    @extend .pa-2;
     @extend .va-t;
     display: inline-block;
-    width: em($tileW);
-    height: em($tileH);
+    width: auto;
+    height: auto;
     margin: 0 auto em(20px);
+    
+    @media (min-width: $g-xs) {
+      width: em($tileW);
+      height: em($tileH);
+      padding: $b-space-2;
+      margin: 0 $b-space-4 $b-space-4;
+    }
 
     @media (min-width: $g-m) {
       width: em($m--tileW);
@@ -500,7 +509,7 @@ $m--tileImgH: 300px;
 
   .story-author {
     float: none;
-    margin: 0 auto $b-space-4;
+    margin: 0 auto $b-space-2;
     text-align: center;
 
     .author-tn.tn-round {
@@ -583,33 +592,33 @@ $m--tileImgH: 300px;
    Animations
    ========================================================================== */
 
-   @-webkit-keyframes bounce {
-    0%, 10%, 25%, 40%, 50% {
-      -webkit-transform: translateY(0);
-      transform: translateY(0);
-    }
-    20% {
-      -webkit-transform: translateY(-10px);
-      transform: translateY(-10px);
-    }
-    30% {
-      -webkit-transform: translateY(-5px);
-      transform: translateY(-5px);
-    }
+@-webkit-keyframes bounce {
+  0%, 10%, 25%, 40%, 50% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
   }
+  20% {
+    -webkit-transform: translateY(-10px);
+    transform: translateY(-10px);
+  }
+  30% {
+    -webkit-transform: translateY(-5px);
+    transform: translateY(-5px);
+  }
+}
 
-  @keyframes bounce {
-    0%, 10%, 25%, 40%, 50% {
-      -webkit-transform: translateY(0);
-      transform: translateY(0);
-    }
-    20% {
-      -webkit-transform: translateY(-10px);
-      transform: translateY(-10px);
-    }
-    30% {
-      -webkit-transform: translateY(-5px);
-      transform: translateY(-5px);
-    }
+@keyframes bounce {
+  0%, 10%, 25%, 40%, 50% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
   }
+  20% {
+    -webkit-transform: translateY(-10px);
+    transform: translateY(-10px);
+  }
+  30% {
+    -webkit-transform: translateY(-5px);
+    transform: translateY(-5px);
+  }
+}
 
