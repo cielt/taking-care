@@ -10,11 +10,11 @@
         $marqueeMain = $('.marquee-main'),
         $marqueeRefreshBtn = $marqueeMain.find('.slide-refresh-btn'),
         $homeSlideshow = $('#home-slideshow'),
-        $homeSlides = $homeSlideshow.find('.image-window'),
+        $homeSlides = $homeSlideshow.find('.slide-image'),
         $homeSlideRefreshBtn = $('.slide-controls .slide-refresh-btn'),
         homeSlidesArr = [],
         headerWaypoint,
-        $scrollDownArrow = $marqueeMain.find('.slide-control-btn.scroll-to-content-btn'),
+        $scrollDownArrow = $marqueeMain.find('.scroll-to-content-btn'),
         $siteNavBlock = $('.site-nav-block');
 
     TakingCare.currSlideIndex = 0;

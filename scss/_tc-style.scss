@@ -58,6 +58,7 @@ $marqueeMaxHeight: em(512px);
     color: $white;
     letter-spacing: em(0.5px);
     transition: all 0.3s ease;
+    border: none;
 
     // taking care
     .home-label {
@@ -122,46 +123,8 @@ $marqueeMaxHeight: em(512px);
   position: relative;
   height: 100vh;
 
-  .slide-frame {
+  .slide-frame, .cover-image-frame {
     width: 100vw;
-  }
-
-  .image-window {
-    width: 100%; 
-    min-height: em(240px);
-    height: 100vh;
-    text-align: center;
-    overflow: hidden;
-    background: $black no-repeat center center;
-    background-size: cover;
-    position: absolute;
-    z-index: 2;
-    top: 0;
-    left: 0;
-    @include opacity(0);
-    transition: opacity 1s ease;
-
-    &.current {
-      z-index: 3;
-      @include opacity(100);
-    }
-
-    // TODO: make JSON for SLIDES
-    &.slide-1 {
-      background-image: url(../images/slideshow/mom-breakaway-open-sea.jpg);
-    }
-
-    &.slide-2 {
-      background-image: url(../images/slideshow/memoriam-1-mom-solo-red-dress.jpg);
-    }
-
-    &.slide-3 {
-      background-image: url(../images/slideshow/memoriam-2-mom-dad-wedding.jpg);
-    }
-
-    &.slide-4 {
-      background-image: url(../images/slideshow/gong-gong-pwo-pwo-mom-1949.jpg);
-    }
   }
 }
 
@@ -172,7 +135,7 @@ $marqueeMaxHeight: em(512px);
     bottom: 0;
     text-align: right;
     color: white;
-    padding: em(10px);
+    padding: $b-space-2;
     // type
     .site-title {
       font-weight: 300;
@@ -214,29 +177,90 @@ $marqueeMaxHeight: em(512px);
       margin: $b-space-2;
     }
 
-    &.scroll-to-content-btn {
-      width: em(48px, 24px);
-      height: em(48px, 24px);
-      line-height: em(48px, 24px);
-      background-color: rgba(255, 255, 255, 0);
-      top: 100%;
-        margin-top: em(-58px, 24px); // 48+10
-        left: 50%;
-        margin-left: em(-24px, 24px); // 48/2
-        -webkit-animation: bounce 4s 2s infinite;
-        animation: bounce 4s 2s infinite;
 
-        &:hover, &:focus {
-          -webkit-animation: none;
-          animation: bounce none;   
-        }
-      }
+    &:focus, &:hover {
+      background-color: rgba(255, 255, 255, 0.36);
+    }
+  }  
+}
 
-      &:focus, &:hover {
-        background-color: rgba(255, 255, 255, 0.36);
-      }
-    }  
+
+.scroll-to-content-btn {
+  width: em(48px, 24px);
+  height: em(48px, 24px);
+  line-height: em(48px, 24px);
+  text-align: center;
+  font-size: $b-fontSize-xl;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0);
+  border: none;
+  top: 100%;
+  margin-top: em(-58px, 24px); // 48+10
+  left: 50%;
+  margin-left: em(-24px, 24px); // 48/2
+  -webkit-animation: bounce 4s 2s infinite;
+  animation: bounce 4s 2s infinite;
+  transition: background-color 0.3s ease;
+  position: absolute;
+  z-index: 3;
+
+  &:hover, &:focus {
+    -webkit-animation: none;
+    animation: bounce none;
+    background-color: rgba(255, 255, 255, 0.36);   
   }
+}
+
+
+// ----- Home Page slideshow ----- //
+
+.slide-image, .cover-image-frame {
+  width: 100%; 
+  min-height: em(240px);
+  height: 100vh;
+  text-align: center;
+  overflow: hidden;
+  background: $black no-repeat center center;
+  background-size: cover;
+  top: 0;
+  left: 0;
+}
+
+.slide-image {
+  position: absolute;
+  z-index: 2;
+  @include opacity(0);
+  transition: opacity 1s ease;
+
+  &.current {
+    z-index: 3;
+    @include opacity(100);
+  }
+
+  // TODO: make JSON for SLIDES
+  &.slide-1 {
+    background-image: url(../images/slideshow/mom-breakaway-open-sea.jpg);
+  }
+
+  &.slide-2 {
+    background-image: url(../images/slideshow/memoriam-1-mom-solo-red-dress.jpg);
+  }
+
+  &.slide-3 {
+    background-image: url(../images/slideshow/memoriam-2-mom-dad-wedding.jpg);
+  }
+
+  &.slide-4 {
+    background-image: url(../images/slideshow/gong-gong-pwo-pwo-mom-1949.jpg);
+  }
+}
+
+.cover-image-frame {
+  &.cover-chapter-1 {
+    background-image: url(../images/slideshow/gong-gong-pwo-pwo-mom-1949.jpg);  
+  }
+}
+  
 
 
 // -------------------------------------
@@ -271,9 +295,10 @@ $marqueeMaxHeight: em(512px);
   .site-nav-link {
     color: $grey4;
     text-decoration: none;
+    border: none;
 
     &:hover, &:focus {
-      color: $grey0;
+      color: $blue0;
     }
   }
 }
@@ -289,6 +314,7 @@ $marqueeMaxHeight: em(512px);
   line-height: em(16px, 14px);
   width: em(20px, 14px);
   text-align: center;
+  border: none;
 }
 
 // ----- Layers ----- //
@@ -405,6 +431,7 @@ $m--tileImgH: 300px;
     width: auto;
     height: auto;
     margin: 0 auto em(20px);
+    border: none;
     
     @media (min-width: $g-xs) {
       width: em($tileW);
@@ -573,7 +600,7 @@ $m--tileImgH: 300px;
 
 @media (max-width: $g-m) {
   // HOME 
-  .marquee-main, .marquee-main .image-window {
+  .marquee-main, .marquee-main .slide-image, .marquee-main .cover-image-frame {
     height: 60vh;
   }
 }
@@ -582,7 +609,7 @@ $m--tileImgH: 300px;
 // ----- MQ - < 480px ----- //
 @media (max-width: $g-xs) {
   // HOME 
-  .marquee-main, .marquee-main .image-window {
+  .marquee-main, .marquee-main .slide-image, .marquee-main .cover-image-frame {
     height: 40vh;
   }
 }
