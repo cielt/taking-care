@@ -198,9 +198,12 @@
   font-size: $b-fontSize-xxl;
 }
 
+.ts-xxxl {
+  font-size: $b-fontSize-xxxl;
+}
+
 .h1 { 
   font-size: $b-fontSize-xxl;
-  color: $blue0;
   
   @media (min-width: $g-m) {
     font-size: $b-fontSize-h1;
@@ -227,6 +230,12 @@
 .m--ts-xl {
   @media (min-width: $g-m) {
     font-size: $b-fontSize-xl;
+  }
+}
+
+.m--ts-xxxl {
+  @media (min-width: $g-m) {
+    font-size: $b-fontSize-xxxl;
   }
 }
 
