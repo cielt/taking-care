@@ -26,7 +26,21 @@
           </ul>
         </div>
       </div>
-      <div class="scaffold-inner">
+      <div class="scaffold-inner has-theme-image-bg">
+        <div class="theme-image-bg theme-chapter-1">
+          <div class="marquee-main chapter-cover w-max mx-auto p-rel">
+            <!-- <div class="cover-image-frame cover-chapter-1"></div> -->
+            <div class='cover-image-overlay'></div>
+            <div class="cover-image-title">
+              <h1 class="h1 m--ts-xxxl c-white mb-1">Early Years</h1>
+              <h2 class="h3 c-blueGrey0 tf-sans">1948 &ndash; 1966</h2>
+            </div>
+            <a href="#chapter-intro" class="scroll-to-content-btn c-white" data-offset="0">
+              <b class="fa fa-angle-down fa-2x" aria-hidden="true"></b>
+              <span class="vis-hidden">scroll down to page content</span>
+            </a>
+          </div>
+        </div>
         <div class="menu-overlay"></div>
         <!-- global header -->
         <div class="header-bar">
@@ -45,51 +59,73 @@
         <div class="main p-rel z2">
           <div class="header-spacing"></div>
           <!-- ################################################## Slideshow ################################################## -->
-          <div class="marquee-main chapter-cover w-max mx-auto p-rel">
-            <div class="cover-image-frame cover-chapter-1"></div>
-            <div class='cover-image-overlay'></div>
-            <div class="cover-image-title">
-              <h1 class="h1 m--ts-xxxl c-white mb-1">Early Years</h1>
-              <h2 class="h3 c-blueGrey0 tf-sans">1948 &ndash; 1966</h2>
-            </div>
-            <a href="#chapter-intro" class="scroll-to-content-btn c-white" data-offset="0">
-              <b class="fa fa-angle-down fa-2x" aria-hidden="true"></b>
-              <span class="vis-hidden">scroll down to page content</span>
-            </a>
-          </div>
           <!-- Intro -->
-          <div id="chapter-intro" class="section w-max max-gm mx-auto">
-            <div class="g pt-5 pb-5">
-              <!-- Intro Story -->
-              <div class="g-b g-b--1of1 g-b--m--6of12">
-                <div class="pa-2">
-                  <span class="date mb-2">1948 &mdash; 1966</span>  
-                  <h1 class="h2 c-blue0 normal mb-1">Early Years</h1>
-                  <p>Vivamus massa arcu, euismod et condimentum sit amet, iaculis ut eros. Nulla ultrices nisl ac nulla blandit varius. Etiam luctus, nisi id mattis ornare, odio tellus tincidunt quam, id sollicitudin nisl diam non ex. Maecenas aliquam nulla neque, vitae euismod arcu euismod ac. Vestibulum orci risus, venenatis id condimentum nec, egestas nec urna. Quisque vulputate velit non tortor convallis, non bibendum libero sagittis. Nunc congue, nisi vitae sodales pellentesque, ipsum nunc finibus lorem, et iaculis dui quam quis dui. Cras egestas turpis eget odio pulvinar, in viverra sapien scelerisque. Fusce sed malesuada mi. In ut tortor fringilla, bibendum lacus ut, lacinia arcu. In hac habitasse platea dictumst. Integer condimentum neque sed eros dapibus, in cursus velit eleifend. Nulla tincidunt scelerisque bibendum. Phasellus sagittis ornare laoreet. In lacinia justo a leo maximus congue.</p>
-                </div>
-              </div>    
-              <div class="g-b g-b--1of1 g-b--m--1of12">&nbsp;</div>
-              <!-- Images Preview -->
-              <div class="g-b g-b--1of1 g-b--m--5of12">
-                <div class="pa-2">
-                  <div class="section-header cf g">
-                    <div class="g-b g-b--1of1 g-b--m--8of12 px-0">
-                      <h2 class="ts-l c-blueGrey0 mb-1 m--mb0 tf-sans upper section-title">Pictures</h2>
+          <div id="chapter-intro" class="section bg-white">
+            <div class="w-max max-gl mx-auto px-5 pt-6 pb-6"> 
+              <div class="g">
+                <!-- Intro Story -->
+                <div class="g-b g-b--1of1 g-b--m--6of12">
+                  <div class="pa-2">
+                    <span class="date mb-2">1948 &mdash; 1966</span>  
+                    <h1 class="h2 c-blue0 normal mb-1">Early Years</h1>
+                    <p>Vivamus massa arcu, euismod et condimentum sit amet, iaculis ut eros. Nulla ultrices nisl ac nulla blandit varius. Etiam luctus, nisi id mattis ornare, odio tellus tincidunt quam, id sollicitudin nisl diam non ex. Maecenas aliquam nulla neque, vitae euismod arcu euismod ac. Vestibulum orci risus, venenatis id condimentum nec, egestas nec urna. Quisque vulputate velit non tortor convallis, non bibendum libero sagittis. Nunc congue, nisi vitae sodales pellentesque, ipsum nunc finibus lorem, et iaculis dui quam quis dui. Cras egestas turpis eget odio pulvinar, in viverra sapien scelerisque. Fusce sed malesuada mi. In ut tortor fringilla, bibendum lacus ut, lacinia arcu. In hac habitasse platea dictumst. Integer condimentum neque sed eros dapibus, in cursus velit eleifend. Nulla tincidunt scelerisque bibendum. Phasellus sagittis ornare laoreet. In lacinia justo a leo maximus congue.</p>
+                  </div>
+                </div>    
+                <div class="g-b g-b--1of1 g-b--m--1of12">&nbsp;</div>
+                <!-- Images Preview -->
+                <div class="g-b g-b--1of1 g-b--m--5of12">
+                  <div class="pa-2">
+                    <div class="section-header g mb-4">
+                      <div class="g-b g-b--1of1 g-b--m--8of12 px-0">
+                        <h2 class="ts-l c-blueGrey0 mb-1 m--mb0 tf-sans upper section-title">Pictures</h2>
+                      </div>
+                      <div class="section-actions g-b g-b--1of1 g-b--m--4of12 px-0 m--t-alignR">
+                        <!-- TODO: add fa icon -->
+                        <a href="#" class="section-heading-cta">View Slideshow <b class="fa fa-camera" aria-hidden="true"></b></a>
+                      </div>
                     </div>
-                    <div class="section-actions g-b g-b--1of1 g-b--m--4of12 px-0 m--t-alignR">
-                      <!-- TODO: add fa icon -->
-                      <a href="#" class="section-heading-cta">View Slideshow <b class="fa fa-camera" aria-hidden="true"></b></a>
+                    <!-- Pictures: preview -->
+                    <!-- Row 1 -->
+                    <div class="g">
+                      <div class="g-b g-b--1of1 g-b--xs--8of12 xs--pl0 mb-4 xs--mb0">
+                        <div class="img-tile thumb-2x">
+                          <img class="fit" src="images/slideshow/197705-mom-pong-1month.jpg" alt="Mom with 1 month old pong">
+                        </div>  
+                      </div>
+                      <div class="g-b g-b--1of1 g-b--xs--4of12 xs--pr0 mb-4 xs--mb0">
+                        <div class="img-tile thumb-1x mb-4 xs--mb0">
+                          <img class="fit" src="images/slideshow/197805-mom-pong-bottle.jpg" alt="Mom feeding Pong with the bottle">
+                        </div>
+                        <div class="img-tile thumb-1x">
+                          <img class="fit" src="images/slideshow/197811-mom-dad-pong-nilla.jpg" alt="Mom and Dad with Pong holding Nilla Wafers">
+                        </div>     
+                      </div>  
+                    </div>
+                    <!-- Row 2 -->
+                    <div class="g">
+                      <div class="g-b g-b--1of1 g-b--xs--4of12 xs--pl0 mb-4 xs--mb0">
+                        <div class="img-tile thumb-1x mb-4 xs--mb0">
+                          <img class="fit" src="images/slideshow/memoriam-0-mom-dad-siu.jpg" alt="Mom in a red dress in omaha">
+                        </div>
+                        <div class="img-tile thumb-1x">
+                          <img class="fit" src="images/slideshow/gong-gong-pwo-pwo-mom-1949.jpg" alt="Young Mom with Gong-Gong and Pwo-Pwo in the garden">
+                        </div>     
+                      </div>
+                      <div class="g-b g-b--1of1 g-b--xs--8of12 xs--pr0">
+                        <div class="img-tile thumb-2x">
+                          <img class="fit" src="images/slideshow/memoriam-1-mom-solo-red-dress.jpg" alt="Mom and Dad at SIU">
+                        </div>  
+                      </div>  
                     </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          
           <!-- ################################################## Stories ################################################## -->
           <div class="section bg-white">
             <div class="w-max max-gl mx-auto px-5 pt-6 pb-6">
-              <div class="section-header cf g">
+              <div class="section-header g">
                 <div class="g-b g-b--1of1 g-b--m--8of12 px-0">
                   <h2 class="ts-l c-blueGrey0 mb-1 m--mb0 tf-sans upper section-title">Stories</h2>
                 </div>
@@ -164,7 +200,7 @@
             </div>
           </div> 
         </div>
-        <div class="footer p-rel z1">
+        <div class="footer">
           <div class="w-max max-gl mx-auto px-5 pt-6 pb-6">  
             <div class="footer-content">
               <h4 class="h4 c-grey3 tf-sans upper bold mb-4">About This Site</h4>

@@ -583,6 +583,8 @@ $m--tileImgH: 300px;
 // -------------------------------------
 
 .footer {
+  position: relative;
+  z-index: 3;
   background: $navy0;
 }
 

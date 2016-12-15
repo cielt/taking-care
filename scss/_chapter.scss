@@ -5,15 +5,24 @@
 // =====================================
 
 // -------------------------------------
+//   Variables
+// -------------------------------------
+
+$marqueeHeight-g-l: 84vh;
+$marqueeHeight-g-m: 60vh;
+$marqueeHeight-g-xs: 40vh;
+
+$imgTileSize-2x: em(300px, 14px);
+$imgTileSize-1x: em(140px, 14px);
+
+
+// -------------------------------------
 //   Base
 // -------------------------------------
 
-.marquee-main.chapter-cover {
-  .cover-image-frame {
-    position: relative;
-    z-index: 1;
-  }
-  
+.marquee-main.chapter-cover { 
+  height: 100%;
+
   .cover-image-overlay {
     width: 100%;
     height: 100%;
@@ -33,5 +42,96 @@
     height: em(100px);
     margin-top: em(-50px);
     text-align: center;
+  }
+}
+
+// -------------------------------------
+//   Submodules
+// -------------------------------------
+
+// Theme background image
+// .marquee-main > .theme-image-bg
+
+.theme-image-bg {
+  width: 100%;
+  height: $marqueeHeight-g-xs;
+  position: fixed;
+  top: 0;
+  // -webkit-transform: translate3D(0, 0, 0);
+  // -ms-transform: translate3D(0, 0, 0);
+  // transform: translate3D(0, 0, 0);
+  // -webkit-transition: none;
+  // transition: none;
+  z-index: 2;
+  background-image: url(../images/slideshow/mom-breakaway-open-sea.jpg);
+  background-size: cover;
+
+  @media (min-width: $g-xs) {
+    height: $marqueeHeight-g-m;
+  }
+
+  @media (min-width: $g-m) {
+    height: $marqueeHeight-g-l;
+  }
+
+  &.theme-chapter-1 {
+    background-image: url(../images/slideshow/gong-gong-pwo-pwo-mom-1949.jpg);
+  }
+}
+
+
+.scaffold-inner.has-theme-image-bg {
+  .main {
+    margin-top: $marqueeHeight-g-xs;
+
+    @media (min-width: $g-xs) {
+      margin-top: $marqueeHeight-g-m;
+    }
+
+    @media (min-width: $g-m) {
+      margin-top: $marqueeHeight-g-l;
+    }
+  }
+}
+
+.nav-open {
+  // TODO: fix this on nav open
+  .theme-image-bg {
+    //position: absolute;
+  }
+}
+
+// -------------------------------------
+//   Sidebar Pictures Preview
+// -------------------------------------
+
+// ------ TOOLS ------ //
+
+.xs--pl0 {
+  @media (min-width: $g-xs) {
+    padding-left: 0
+  }
+}
+
+.xs--pr0 {
+  @media (min-width: $g-xs) {
+    padding-right: 0
+  }
+}
+
+.img-tile {
+  max-width: $imgTileSize-2x;
+  height: $imgTileSize-2x;
+  overflow: hidden;
+  background: $blueGrey0;
+
+  &.thumb-2x {
+    max-width: $imgTileSize-2x;
+    height: $imgTileSize-2x;  
+  }
+
+  &.thumb-1x {
+    max-width: $imgTileSize-1x;
+    height: $imgTileSize-1x;  
   }
 }
