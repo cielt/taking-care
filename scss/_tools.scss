@@ -168,6 +168,13 @@
   }
 }
 
+.xs--t-alignR {
+  @media screen and (min-width: $g-xs) {
+    text-align: right;
+  }
+}
+
+
 // -------------------------------------
 //   Type Modifiers
 // -------------------------------------
