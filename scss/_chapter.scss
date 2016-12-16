@@ -49,6 +49,23 @@ $imgTileSize-1x: em(140px, 14px);
 //   Submodules
 // -------------------------------------
 
+
+// v spacing for theme image
+.cover-image-spacing {
+  position: relative;
+  width: 100%;
+  height: $marqueeHeight-g-xs;
+  z-index: 1;
+
+  @media (min-width: $g-xs) {
+    height: $marqueeHeight-g-m;
+  }
+
+  @media (min-width: $g-m) {
+    height: $marqueeHeight-g-l;
+  }
+}
+
 // Theme background image
 // .marquee-main > .theme-image-bg
 
@@ -57,11 +74,6 @@ $imgTileSize-1x: em(140px, 14px);
   height: $marqueeHeight-g-xs;
   position: fixed;
   top: 0;
-  // -webkit-transform: translate3D(0, 0, 0);
-  // -ms-transform: translate3D(0, 0, 0);
-  // transform: translate3D(0, 0, 0);
-  // -webkit-transition: none;
-  // transition: none;
   z-index: 2;
   background-image: url(../images/slideshow/mom-breakaway-open-sea.jpg);
   background-size: cover;
@@ -79,27 +91,6 @@ $imgTileSize-1x: em(140px, 14px);
   }
 }
 
-
-.scaffold-inner.has-theme-image-bg {
-  .main {
-    margin-top: $marqueeHeight-g-xs;
-
-    @media (min-width: $g-xs) {
-      margin-top: $marqueeHeight-g-m;
-    }
-
-    @media (min-width: $g-m) {
-      margin-top: $marqueeHeight-g-l;
-    }
-  }
-}
-
-.nav-open {
-  // TODO: fix this on nav open
-  .theme-image-bg {
-    //position: absolute;
-  }
-}
 
 // -------------------------------------
 //   Sidebar Pictures Preview
@@ -123,7 +114,7 @@ $imgTileSize-1x: em(140px, 14px);
   max-width: $imgTileSize-2x;
   height: $imgTileSize-2x;
   overflow: hidden;
-  background: $blueGrey0;
+  background: $blueGrey1;
 
   &.thumb-2x {
     max-width: $imgTileSize-2x;
