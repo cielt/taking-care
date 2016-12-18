@@ -16,7 +16,7 @@
   font-family: $b-serif-fontFamily;
 
   td {
-    padding: $b-space-2;
+    padding: 0 $b-space-2 $b-space-4;
     vertical-align: top;
     text-align: left;
   
@@ -24,13 +24,18 @@
       font-size: $b-fontSize-xl;
       color: $blueGrey0;
       font-style: italic;
-      padding: em(10px, 24px) em(10px, 24px) em(20px, 24px) 0;
+      padding: 0 em(20px, 24px) em(20px, 24px) 0;
       width: em(72px, 24px);
-      border-right: $b-borderWidth-xs solid $grey4;
+      border-right: $b-borderWidth-xs solid $grey3;
     }
 
     &.year-milestones {
       padding: 0;
+    }
+
+    // last of type
+    &:last-of-type {
+      padding-bottom: 0;
     }
   }
 
