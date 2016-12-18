@@ -6,7 +6,9 @@
   $(function () {
 
     var $body = $('body'),
+        bodyLayout = $body.data('layout'),
         $globalMenuBtns = $('#global-menu-btn, #close-menu-btn, .menu-overlay'),
+        $heroEl, // main marquee el for Waypoint settings
         $marqueeMain = $('.marquee-main'),
         $marqueeRefreshBtn = $marqueeMain.find('.slide-refresh-btn'),
         $homeSlideshow = $('#home-slideshow'),
@@ -53,9 +55,23 @@
     // scroll-down arrow
     $scrollDownArrow.arctic_scroll();
 
-    // Waypoints
+    // Waypoints: waypoint el depends on page
+    switch (bodyLayout) {
+      case 'tc-home': 
+        $heroEl = $('.marquee-main');
+        break;
+
+      case 'tc-chapter':
+        $heroEl = $('.cover-image-spacing');
+        break;
+
+      default:
+        $heroEl = $('.marquee-main');
+        break;     
+    }
+
     headerWaypoint = new Waypoint({
-      element: $marqueeMain,
+      element: $heroEl,
       handler: function (direction) {
         if (direction === 'up') {
           $body.removeClass('scroll-down');
@@ -64,8 +80,8 @@
         }
       },
       offset: function () {
-        var marqueeHeight = this.element.outerHeight();
-        return -marqueeHeight;
+        var heroElHeight = this.element.outerHeight();
+        return -heroElHeight;
       }
     });
   });
