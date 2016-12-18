@@ -16,20 +16,21 @@
   font-family: $b-serif-fontFamily;
 
   td {
-    padding: 0 $b-space-2 $b-space-4;
     vertical-align: top;
     text-align: left;
-  
+
     &.year-marker {
       font-size: $b-fontSize-xl;
       color: $blueGrey0;
       font-style: italic;
+      line-height: 2;
       padding: 0 em(20px, 24px) em(20px, 24px) 0;
       width: em(72px, 24px);
       border-right: $b-borderWidth-xs solid $grey3;
     }
 
     &.year-milestones {
+      width: 100%;
       padding: 0;
     }
 
@@ -39,16 +40,18 @@
     }
   }
 
+// details
+.year-milestone-details {
+  width: 100%;
+}
+
   // cells
-  .milestone-date, .milestone-location {
+  .milestone-meta {
+    @extend .px-0;
     color: $navy0;
     font-weight: bold;
     font-size: $b-fontSize-s;
-    width: em(128px, 14px);
-  }
-
-  .milestone-location {
-    width: em(148px, 14px);
+    line-height: 1.5;
   }
 
   .milestone-details {
