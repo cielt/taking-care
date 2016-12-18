@@ -1,0 +1,61 @@
+// =====================================
+//
+//   TC Milestones
+//
+// =====================================
+
+// -------------------------------------
+//   Variables
+// -------------------------------------
+
+// -------------------------------------
+//   Base
+// -------------------------------------
+
+.milestone-years {
+  font-family: $b-serif-fontFamily;
+
+  td {
+    padding: $b-space-2;
+    vertical-align: top;
+    text-align: left;
+  
+    &.year-marker {
+      font-size: $b-fontSize-xl;
+      color: $blueGrey0;
+      font-style: italic;
+      padding: em(10px, 24px) em(10px, 24px) em(20px, 24px) 0;
+      width: em(72px, 24px);
+      border-right: $b-borderWidth-xs solid $grey4;
+    }
+
+    &.year-milestones {
+      padding: 0;
+    }
+  }
+
+  // cells
+  .milestone-date, .milestone-location {
+    color: $navy0;
+    font-weight: bold;
+    font-size: $b-fontSize-s;
+    width: em(128px, 14px);
+  }
+
+  .milestone-location {
+    width: em(148px, 14px);
+  }
+
+  .milestone-details {
+    font-size: $b-fontSize-s;
+    font-style: italic;
+  }
+}
+
+// spacing
+.v-spacing {
+  td { 
+    font-size: $b-fontSize-xs; 
+    height: $b-space-2;
+  }
+}
