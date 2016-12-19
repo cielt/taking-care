@@ -85,39 +85,25 @@
                       </div>
                     </div>
                     <!-- Pictures: preview -->
-                    <!-- Row 1 -->
-                    <div class="g">
-                      <div class="cf">
-                        <div class="g-b g-b--1of1 g-b--xs--8of12 xs--pl0 mb-4 xs--mb0">
-                          <div class="img-tile thumb-2x">
-                            <img class="fit" src="images/slideshow/197705-mom-pong-1month.jpg" alt="Mom with 1 month old pong">
-                          </div>  
-                        </div>
-                        <div class="g-b g-b--1of1 g-b--xs--4of12 xs--pr0 mb-4 xs--mb0">
-                          <div class="img-tile thumb-1x mb-4 xs--mb0">
-                            <img class="fit" src="images/slideshow/197805-mom-pong-bottle.jpg" alt="Mom feeding Pong with the bottle">
-                          </div>
-                          <div class="img-tile thumb-1x">
-                            <img class="fit" src="images/slideshow/197811-mom-dad-pong-nilla.jpg" alt="Mom and Dad with Pong holding Nilla Wafers">
-                          </div>     
-                        </div>
-                      </div> 
-                      <!-- Row 2 -->
-                      <div class="cf">
-                        <div class="g-b g-b--1of1 g-b--xs--4of12 xs--pl0 mb-4 xs--mb0">
-                          <div class="img-tile thumb-1x mb-4 xs--mb0">
-                            <img class="fit" src="images/slideshow/memoriam-0-mom-dad-siu.jpg" alt="Mom in a red dress in omaha">
-                          </div>
-                          <div class="img-tile thumb-1x">
-                            <img class="fit" src="images/slideshow/gong-gong-pwo-pwo-mom-1949.jpg" alt="Young Mom with Gong-Gong and Pwo-Pwo in the garden">
-                          </div>     
-                        </div>
-                        <div class="g-b g-b--1of1 g-b--xs--8of12 xs--pr0">
-                          <div class="img-tile thumb-2x">
-                            <img class="fit" src="images/slideshow/memoriam-1-mom-solo-red-dress.jpg" alt="Mom and Dad at SIU">
-                          </div>  
-                        </div>
+                    <div class="masonry-grid">
+                      <div class="grid-item img-tile thumb-2x">
+                        <img class="fit" src="images/slideshow/197705-mom-pong-1month.jpg" alt="Mom with 1 month old pong">
                       </div>  
+                      <div class="grid-item img-tile thumb-1x mb-4 xs--mb0">
+                        <img class="fit" src="images/slideshow/197805-mom-pong-bottle.jpg" alt="Mom feeding Pong with the bottle">
+                      </div>
+                      <div class="grid-item img-tile thumb-1x">
+                        <img class="fit" src="images/slideshow/197811-mom-dad-pong-nilla.jpg" alt="Mom and Dad with Pong holding Nilla Wafers">
+                      </div>     
+                      <div class="grid-item img-tile thumb-2x mb-4 xs--mb0">
+                        <img class="fit" src="images/slideshow/memoriam-0-mom-dad-siu.jpg" alt="Mom and Dad at SIU">
+                      </div>
+                      <div class="grid-item img-tile thumb-1x">
+                        <img class="fit" src="images/slideshow/gong-gong-pwo-pwo-mom-1949.jpg" alt="Young Mom with Gong-Gong and Pwo-Pwo in the garden">
+                      </div>     
+                      <div class="grid-item img-tile thumb-2x">
+                        <img class="fit" src="images/slideshow/memoriam-1-mom-solo-red-dress.jpg" alt="Mom in a red dress in omaha">
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -214,9 +200,9 @@
                 </div>
                 <div class="section-actions g-b g-b--1of1 g-b--m--4of12 px-0 m--t-alignR">
                   <!-- TODO: add fa icon -->
-                  <a href="#" class="section-heading-cta">Read Stories <b class="fa fa-bookmark dib mr-1" aria-hidden="true"></b></a>
+                  <a href="#" class="section-heading-cta">Read Stories <b class="fa fa-bookmark dib" aria-hidden="true"></b></a>
                   <span class="h-divider">|</span>
-                  <a href="#" class="section-heading-cta">Share a Story <b class="fa fa-comment dib mr-1" aria-hidden="true"></b></a>
+                  <a href="#" class="section-heading-cta">Share a Story <b class="fa fa-comment dib" aria-hidden="true"></b></a>
                 </div>
               </div>
               <hr class="hairline mt-2 mb-4">
@@ -293,11 +279,11 @@
                 </div>
                 <div class="g-b g-b--1of1 g-b--m--1of12">&nbsp;</div>
                 <div class="g-b g-b--1of1 g-b--m--2of12 px-0">
-                  <a class="footer-cta" href="#">Share a Story <b class="fa fa-comment dib mr-1" aria-hidden="true"></b></a>
+                  <a class="footer-cta" href="#">Share a Story <b class="fa fa-comment dib" aria-hidden="true"></b></a>
                 </div>
                 <div class="g-b g-b--1of1 g-b--m--1of12">&nbsp;</div>
                 <div class="g-b g-b--1of1 g-b--m--2of12 px-0">
-                  <a class="footer-cta" href="#">Contact Us <b class="fa fa-envelope dib mr-1" aria-hidden="true"></b></a>
+                  <a class="footer-cta" href="#">Contact Us <b class="fa fa-envelope dib" aria-hidden="true"></b></a>
                 </div>
               </div>
             </div>
@@ -309,7 +295,10 @@
   <script src="node_modules/jquery/dist/jquery.min.js"></script>
   <script src="node_modules/slick-carousel/slick/slick.min.js"></script>
   <script src="node_modules/waypoints/lib/jquery.waypoints.min.js"></script>
+  <script src="node_modules/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="node_modules/masonry-layout/dist/masonry.pkgd.min.js"></script>
   <script src="js/utilities.js"></script>
+  <script src="js/chapter.js"></script>
   <script src="js/mom.js"></script>
 </body>
 </html>

@@ -12,8 +12,8 @@ $marqueeHeight-g-l: 84vh;
 $marqueeHeight-g-m: 60vh;
 $marqueeHeight-g-xs: 40vh;
 
-$imgTileSize-2x: em(300px, 14px);
-$imgTileSize-1x: em(140px, 14px);
+$imgTileSize-2x: em(240px, 14px);
+$imgTileSize-1x: em(120px, 14px);
 
 
 // -------------------------------------
@@ -111,18 +111,26 @@ $imgTileSize-1x: em(140px, 14px);
 }
 
 .img-tile {
-  max-width: $imgTileSize-2x;
-  height: $imgTileSize-2x;
+  width: $imgTileSize-2x;
+  height: auto;
   overflow: hidden;
   background: $blueGrey1;
+  margin-bottom: $b-space-2;
 
   &.thumb-2x {
-    max-width: $imgTileSize-2x;
-    height: $imgTileSize-2x;  
+    width: $imgTileSize-2x;
   }
 
   &.thumb-1x {
-    max-width: $imgTileSize-1x;
-    height: $imgTileSize-1x;  
+    width: $imgTileSize-1x;
+  }
+}
+
+// ------ MASONRY ------ //
+
+.masonry-grid {
+  
+  .grid-item {
+
   }
 }
