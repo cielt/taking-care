@@ -129,22 +129,15 @@ $marqueeMaxHeight: em(512px);
 }
 
 // site title
-.marquee-main {
+.marquee-main.home-cover {
   .title-block {
     width: 100%;
-    bottom: 0;
-    text-align: right;
+    top: 50%;
+    height: em(120px);
+    margin-top: em(-60px);
+    text-align: center;
     color: white;
     padding: $b-space-2;
-    // type
-    .site-title {
-      font-weight: 300;
-    }
-
-    .site-description {
-      font-size: $b-fontSize-s;
-      font-weight: 400;
-    }
   }
 
   // controls
