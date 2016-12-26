@@ -10,8 +10,8 @@
       function () {
         $grid.masonry({
           itemSelector: '.grid-item',
-          columnWidth: '.thumb-1x',
-          gutter: 10,
+          columnWidth: '.grid-sizer',
+          gutter: '.gutter-sizer',
           percentPosition: true
         });
       });

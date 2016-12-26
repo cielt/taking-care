@@ -110,27 +110,35 @@ $imgTileSize-1x: em(120px, 14px);
   }
 }
 
-.img-tile {
-  width: $imgTileSize-2x;
-  height: auto;
-  overflow: hidden;
-  background: $blueGrey1;
-  margin-bottom: $b-space-2;
-
-  &.thumb-2x {
-    width: $imgTileSize-2x;
-  }
-
-  &.thumb-1x {
-    width: $imgTileSize-1x;
-  }
-}
-
 // ------ MASONRY ------ //
 
 .masonry-grid {
   
-  .grid-item {
+  // double gutter
+  .grid-item, .grid-sizer {
+    width: 22%;
 
+    &.grid-item--w2x {
+      width: 48%;
+    }
+
+    // single gutter
+    @media (min-width: $g-m) {
+      width: 30%;
+
+      &.grid-item--w2x {
+        width: 64%;
+      }
+    }
+  }
+
+  .gutter-sizer {
+    width: 4%;
+  }
+
+  .grid-item {
+    overflow: hidden;
+    height: auto;
+    margin-bottom: $b-space-2;
   }
 }
