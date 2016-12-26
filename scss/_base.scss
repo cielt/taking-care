@@ -178,6 +178,10 @@ address {
   width: auto;
   margin: 0;
   border-bottom: $b-borderWidth-xs solid $grey2;
+
+  &.grey3 {
+    border-color: $grey3;
+  }
 }
 
 // -------------------------------------
@@ -205,6 +209,7 @@ a:hover {
   color: $grey3;
   font-family: $b-sans-fontFamily;
   font-weight: 700;
+  border-color: $blueGrey0;
 
   &:hover, &:focus {
     color: $grey0;

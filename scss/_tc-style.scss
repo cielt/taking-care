@@ -55,6 +55,7 @@ $marqueeMaxHeight: em(512px);
 
   // home link
   .home-link {
+    display: block;
     color: $white;
     letter-spacing: em(0.5px);
     transition: all 0.3s ease;
