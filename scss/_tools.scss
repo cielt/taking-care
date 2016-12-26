@@ -279,7 +279,6 @@ em, .italic {
 
 .tf-sans {
   font-family: $b-sans-fontFamily;
-  font-weight: 300;
 }
 
 .tf-serif {
@@ -292,11 +291,11 @@ em, .italic {
   text-transform: uppercase;
 }
 
-.lsp-1 {
-  letter-spacing: 1px;
-}
-
 // ----- Weight ----- //
+
+.light {
+  font-weight: 300;
+}
 
 .normal, .fw-400 {
   font-weight: 400; // normal

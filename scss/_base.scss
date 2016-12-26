@@ -27,7 +27,6 @@ body, .outer-scaffold, .inner-scaffold {
   -webkit-font-feature-settings: 'kern' 1;
   -moz-font-feature-settings: 'kern' 1;
   -o-font-feature-settings: 'kern' 1;
-  text-rendering: geometricPrecision;
 }
 
 ::-moz-selection {
@@ -89,7 +88,7 @@ h3, .h3,
 h4, .h4,
 h5, .h5,
 h6, .h6 {
-  font-weight: normal;
+  font-weight: inherit;
   line-height: 1.2;
   margin-top: 0; // use tool class for other spacing attributes
 }
