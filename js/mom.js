@@ -67,7 +67,7 @@
 
       default:
         $heroEl = $('.marquee-main');
-        break;     
+        break;
     }
 
     headerWaypoint = new Waypoint({
@@ -81,7 +81,7 @@
       },
       offset: function () {
         var heroElHeight = this.element.outerHeight();
-        return -heroElHeight;
+        return -(heroElHeight -1);
       }
     });
   });
