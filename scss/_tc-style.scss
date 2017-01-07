@@ -224,7 +224,7 @@ $marqueeMaxHeight: em(512px);
   position: absolute;
   z-index: 2;
   @include opacity(0);
-  transition: opacity 1s ease;
+  transition: opacity 1.6s ease;
 
   &.current {
     z-index: 3;
@@ -254,7 +254,6 @@ $marqueeMaxHeight: em(512px);
     background-image: url(../images/slideshow/gong-gong-pwo-pwo-mom-1949.jpg);  
   }
 }
-  
 
 
 // -------------------------------------
