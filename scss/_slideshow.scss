@@ -60,22 +60,25 @@ $m--slideshow-height: em(480px);
   z-index: 2;
   display: block;
   text-align: right;
-  line-height: em(32px, 12px);
+  line-height: em(32px);
   font-family: $b-sans-fontFamily;
-  font-size: $b-fontSize-xs;
   color:$grey5;
-  width: em(80px, 12px);
+  width: em(80px);
   left: 100%;
-  margin-left: em(-80px, 12px);
+  margin-left: em(-80px);
   top: 100%;
-  margin-top: em(-64px, 12px);
+  margin-top: em(-64px);
 }
 
 
-// slick control overrides
+// SLICK plugin overrides
 
 .slideshow-controls {
   .slick-prev, .slick-next {
+    position: relative;
+    top: inherit;
+    left: inherit;
+    right: inherit;
     border-radius: $b-borderRad-1;
     display: block;
     float: left;
@@ -89,6 +92,9 @@ $m--slideshow-height: em(480px);
     font-size: $b-fontSize-l;
     padding: 0;
     text-align: center;
+    -webkit-transform: none;
+    -ms-transform: none;
+    transform: none;
 
     &:before {
       content: '';
@@ -104,6 +110,59 @@ $m--slideshow-height: em(480px);
   .slick-next {
     float: right;
   }
+}
+
+.slick-dots {
+  position: relative;
+  bottom: inherit;
+  width: auto;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-align: right;
+}
+
+.slick-dots li {
+  position: relative;
+  display: none;
+  width: auto;
+  height: auto;
+  margin: 0 em(6px);
+  padding: 0;
+  cursor: pointer;
+
+  &.slick-active {
+    display: inline-block;
+  }
+}
+
+.slick-dots li button {
+  &:before {
+    display: none;
+  }
+
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+
+  &::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+  }
+
+  font-size: $b-fontSize-xs;
+  font-weight: normal;
+  line-height: normal;
+  display: inline-block;
+  width: auto;
+  height: auto;
+  padding: 0;
+  color: $grey5;
+  border: 0;
+  outline: none;
+  background: $clear;
 }
 
 

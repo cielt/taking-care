@@ -8,6 +8,7 @@
   <title>Early Years: Slideshow | Taking Care | Remembering Mom</title>
   <script src="https://use.fontawesome.com/3befb0232d.js"></script>
   <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400italic,700" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="node_modules/slick-carousel/slick/slick-theme.css">
   <link rel="stylesheet" href="css/screen.css">
 </head>
 <body class="nav-closed tc-slideshow theme-dark" data-layout="tc-slideshow">
@@ -55,19 +56,52 @@
               </div>
               <div id="slideshow" class="slideshow">
                 <!-- markers, controls -->
-                <span class="slideshow-marker">1 of 16</span>
+                <div class="slideshow-marker"></div>
                 <div id="slideshow-controls" class="slideshow-controls">
-                  <div class="slideshow-arrows cf">
-                    <a href="#" class="slick-prev"><span class="vis-hidden">previous</span><b class="fa fa-chevron-left" aria-hidden="true"></b></a>
-                    <a href="#" class="slick-next"><span class="vis-hidden">next</span><b class="fa fa-chevron-right" aria-hidden="true"></b></a>
-                  </div>
+                  <div class="slideshow-arrows cf"></div>
                 </div>
                 <div id="slideshow-frame" class="slideshow-frame">
-                  <div class="slideshow-slide g c-white">
+                  <div class="slideshow-slide g c-white" data-index="1">
                     <!-- Intro Story -->
                     <div class="g-b g-b--1of1 g-b--m--8of12 px-0 m--px1">
                       <div class="slide-image-frame mb-4 m--mb0">
                         <img class="fit" src="images/slideshow/mom-breakaway-open-sea.jpg" alt="Mom on the Breakaway on the open sea">
+                      </div>    
+                    </div>
+                    <!-- Images Preview -->
+                    <div class="g-b g-b--1of1 g-b--m--4of12 px-0 m--px1 flex-wrap-content-end">
+                      <div class="slide-info m--pl2 flex-item-content-end">
+                        <p class="slide-caption mb-2">Fusce id lacus tortor. Maecenas ut ligula lorem. Cras sit amet mi aliquam, efficitur felis scelerisque, iaculis diam. Nulla placerat ligula pharetra, egestas erat in, consectetur nunc.</p>
+                        <p class="slide-meta-info ts-s tf-sans c-grey5 lh-reset light">
+                          Maecenas ut ligula lorem cras sit amet aliquam January 1949
+                        </p>
+                      </div>
+                      <div class="controls-spacer flex-item-content-end dn m--show"></div>
+                    </div>
+                  </div>
+                  <div class="slideshow-slide g c-white" data-index="2">
+                    <!-- Intro Story -->
+                    <div class="g-b g-b--1of1 g-b--m--8of12 px-0 m--px1">
+                      <div class="slide-image-frame mb-4 m--mb0">
+                        <img class="fit" data-lazy="images/slideshow/mom-dad-breakaway-deck.jpg" alt="Mom and Dad on the Breakaway deck">
+                      </div>    
+                    </div>
+                    <!-- Images Preview -->
+                    <div class="g-b g-b--1of1 g-b--m--4of12 px-0 m--px1 flex-wrap-content-end">
+                      <div class="slide-info m--pl2 flex-item-content-end">
+                        <p class="slide-caption mb-2">Fusce id lacus tortor. Maecenas ut ligula lorem. Cras sit amet mi aliquam, efficitur felis scelerisque, iaculis diam. Nulla placerat ligula pharetra, egestas erat in, consectetur nunc.</p>
+                        <p class="slide-meta-info ts-s tf-sans c-grey5 lh-reset light">
+                          Maecenas ut ligula lorem cras sit amet aliquam January 1949
+                        </p>
+                      </div>
+                      <div class="controls-spacer flex-item-content-end dn m--show"></div>
+                    </div>
+                  </div>
+                  <div class="slideshow-slide g c-white" data-index="3">
+                    <!-- Intro Story -->
+                    <div class="g-b g-b--1of1 g-b--m--8of12 px-0 m--px1">
+                      <div class="slide-image-frame mb-4 m--mb0">
+                        <img class="fit" data-lazy="images/slideshow/197811-mom-dad-pong-nilla.jpg" alt="Mom and Dad with Pong and a box of Nilla wafers">
                       </div>    
                     </div>
                     <!-- Images Preview -->
@@ -118,5 +152,6 @@
   <script src="node_modules/waypoints/lib/jquery.waypoints.min.js"></script>
   <script src="js/utilities.js"></script>
   <script src="js/mom.js"></script>
+  <script src="js/slideshow.js"></script>
 </body>
 </html>
