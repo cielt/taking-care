@@ -31,6 +31,17 @@
 
 // ----- Responsive Display ----- //
 
+.m--dib {
+  @media (min-width: $g-m) {
+    display: inline-block;
+  }
+}
+
+.m--show {
+  @media (min-width: $g-m) {
+    display: block;
+  }
+}
 
 // visually hidden
 
@@ -263,6 +274,10 @@
 
 .c-grey4 {
   color: $grey4;
+}
+
+.c-grey5 {
+  color: $grey5;
 }
 
 .c-blueGrey0 {
@@ -723,6 +738,18 @@ strong, .bold {
 
 // ----- Responsive Padding ----- //
 
+.m--pl2 {
+  @media (min-width: $g-m) {
+    padding-left: $b-space-2;
+  }
+}
+
+.m--px1 {
+  @media (min-width: $g-m) {
+    padding-left: $b-space-1;
+    padding-right: $b-space-1;
+  }
+}
 
 
 // -------------------------------------

@@ -1,0 +1,59 @@
+// =====================================
+//
+//   Slideshow
+//
+// =====================================
+
+// -------------------------------------
+//   Vars
+// -------------------------------------
+
+$m--slideshow-height: em(480px);
+
+// -------------------------------------
+//   Submodules
+// -------------------------------------
+
+// ----- Header ----- //
+
+.v-divider:after {
+  @media (min-width: $g-m) {
+    display: inline-block;
+    font-weight: normal;
+    content: '|';
+    margin-left: $b-space-2;
+    margin-right: $b-space-2;
+  }
+}
+
+.header-date {
+  font-size: $b-fontSize-xs;
+  font-weight: 300;
+  font-family: $b-sans-fontFamily;
+  color: $white;
+}
+
+// ----- Slideshow Image ----- //
+
+.slide-image-frame {
+  @media (min-width: $g-m) {
+    height: $m--slideshow-height;
+    overflow: hidden;
+  }
+}
+
+
+// ----- Flexbox ----- //
+
+.flex-wrap-content-end {
+  @media (min-width: $g-m) {
+    @include flexbox();
+    flex-flow: column;
+    justify-content: flex-end;
+    height: $m--slideshow-height;
+  }
+}
+
+.flex-wrap-content-end {
+
+}

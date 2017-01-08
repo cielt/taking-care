@@ -64,6 +64,10 @@
         $heroEl = $('.cover-image-spacing');
         break;
 
+      case 'tc-slideshow':
+        $heroEl = $('.header-slideshow');
+        break;  
+
       default:
         $heroEl = $('.marquee-main');
         break;
