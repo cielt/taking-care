@@ -22,6 +22,7 @@ $imgTileSize-1x: em(120px, 14px);
 
 .marquee-main.chapter-cover { 
   height: 100%;
+  background-color: inherit;
 
   .cover-image-overlay {
     width: 100%;

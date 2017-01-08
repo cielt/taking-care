@@ -46,7 +46,7 @@
           <div class="header-spacing"></div>
           <!-- ################################################## Slideshow ################################################## -->
           <!-- Intro -->
-          <div id="slideshow-frame" class="section">
+          <div id="slideshow-section" class="section">
             <div class="w-max max-gl mx-auto px-5 pt-6 pb-6"> 
               <div class="header-slideshow pa-2 mb-5">
                 <h1 class="t-alignC c-blueGrey0">
@@ -54,20 +54,31 @@
                 </h1>  
               </div>
               <div id="slideshow" class="slideshow">
-                <div class="slideshow-slide g c-white">
-                  <!-- Intro Story -->
-                  <div class="g-b g-b--1of1 g-b--m--8of12 px-0 m--px1">
-                    <div class="slide-image-frame mb-4 m--mb0">
-                      <img class="fit" src="images/slideshow/mom-breakaway-open-sea.jpg" alt="Mom on the Breakaway on the open sea">
-                    </div>    
+                <!-- markers, controls -->
+                <span class="slideshow-marker">1 of 16</span>
+                <div id="slideshow-controls" class="slideshow-controls">
+                  <div class="slideshow-arrows cf">
+                    <a href="#" class="slick-prev"><span class="vis-hidden">previous</span><b class="fa fa-chevron-left" aria-hidden="true"></b></a>
+                    <a href="#" class="slick-next"><span class="vis-hidden">next</span><b class="fa fa-chevron-right" aria-hidden="true"></b></a>
                   </div>
-                  <!-- Images Preview -->
-                  <div class="g-b g-b--1of1 g-b--m--4of12 px-0 m--px1 flex-wrap-content-end">
-                    <div class="slide-info m--pl2 flex-item-content-end">
-                      <p class="ts-l mb-2">Fusce id lacus tortor. Maecenas ut ligula lorem. Cras sit amet mi aliquam, efficitur felis scelerisque, iaculis diam. Nulla placerat ligula pharetra, egestas erat in, consectetur nunc.</p>
-                      <p class="slide-meta-info ts-s tf-sans c-grey5 lh-reset light">
-                        Maecenas ut ligula lorem cras sit amet aliquam January 1949
-                      </p>
+                </div>
+                <div id="slideshow-frame" class="slideshow-frame">
+                  <div class="slideshow-slide g c-white">
+                    <!-- Intro Story -->
+                    <div class="g-b g-b--1of1 g-b--m--8of12 px-0 m--px1">
+                      <div class="slide-image-frame mb-4 m--mb0">
+                        <img class="fit" src="images/slideshow/mom-breakaway-open-sea.jpg" alt="Mom on the Breakaway on the open sea">
+                      </div>    
+                    </div>
+                    <!-- Images Preview -->
+                    <div class="g-b g-b--1of1 g-b--m--4of12 px-0 m--px1 flex-wrap-content-end">
+                      <div class="slide-info m--pl2 flex-item-content-end">
+                        <p class="slide-caption mb-2">Fusce id lacus tortor. Maecenas ut ligula lorem. Cras sit amet mi aliquam, efficitur felis scelerisque, iaculis diam. Nulla placerat ligula pharetra, egestas erat in, consectetur nunc.</p>
+                        <p class="slide-meta-info ts-s tf-sans c-grey5 lh-reset light">
+                          Maecenas ut ligula lorem cras sit amet aliquam January 1949
+                        </p>
+                      </div>
+                      <div class="controls-spacer flex-item-content-end dn m--show"></div>
                     </div>
                   </div>
                 </div>  

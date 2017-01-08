@@ -43,7 +43,7 @@
           TakingCare.currSlideIndex = 0;
         } else {
           TakingCare.currSlideIndex += 1;
-        } 
+        }
         
         $homeSlides.removeClass('current');
         $homeSlides.eq(TakingCare.currSlideIndex).addClass('current');

@@ -122,6 +122,7 @@ $marqueeMaxHeight: em(512px);
   display: table;
   width: 100%;
   position: relative;
+  background-color: $black;
   height: 100vh;
 
   .slide-frame, .cover-image-frame {
