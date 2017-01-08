@@ -2,12 +2,8 @@
 //   WayPoints
 // -------------------------------------
 
-.scroll-down {
+.scroll-down, .theme-dark {
   .header-bar {
-    .overlay {
-      @include opacity(24);
-    }
-
     // home link
     .home-link {
       color: $blueGrey0;
@@ -25,5 +21,12 @@
         border-color: $blueGrey0;  
       }
     }
+  }
+}
+
+
+.scroll-down {
+  .header-bar .overlay {
+    @include opacity(24);
   }
 }
