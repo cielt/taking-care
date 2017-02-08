@@ -56,10 +56,12 @@
 // nesting / contain - <img>
 
 .fit {
+  display: block;
   width: 100%;
 }
 
 .fit-h {
+  display: block;
   height: 100%;
   width: auto;
 }
@@ -748,6 +750,13 @@ strong, .bold {
   @media (min-width: $g-m) {
     padding-left: $b-space-1;
     padding-right: $b-space-1;
+  }
+}
+
+.m--px6 {
+  @media (min-width: $g-m) {
+    padding-left: $b-space-6;
+    padding-right: $b-space-6;
   }
 }
 
